@@ -3,30 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer</title>
+  <title>Rifky Akhmad Fernanda | Full-Stack Engineer & Systems Architect</title>
   
   <!-- Comprehensive SEO & Indexing -->
-  <meta name="description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Systems Architect, Full-Stack Engineer, and AI Researcher from Bojonegoro, Indonesia.">
-  <meta name="keywords" content="Rifky Akhmad Fernanda, RifkyA911, Systems Architect, Full-Stack Engineer, Autonomous Agents, Bojonegoro, Golang, TypeScript, Python, Microservices, RAG, OpenTelemetry">
+  <meta name="description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Full-Stack Engineer & Systems Architect from Bojonegoro, Indonesia.">
+  <meta name="keywords" content="Rifky Akhmad Fernanda, RifkyA911, Full-Stack Engineer, Systems Architect, Autonomous Agents, Bojonegoro, Golang, TypeScript, Python, Microservices, RAG, OpenTelemetry">
   <meta name="author" content="Rifky Akhmad Fernanda">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://rifkya911.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer">
-  <meta property="og:description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Systems Architect, Full-Stack Engineer, and AI Researcher.">
+  <meta property="og:title" content="Rifky Akhmad Fernanda | Full-Stack Engineer & Systems Architect">
+  <meta property="og:description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Full-Stack Engineer & Systems Architect.">
   <meta property="og:url" content="https://rifkya911.github.io/">
   <meta property="og:site_name" content="Rifky Akhmad Fernanda Portfolio">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="id_ID">
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/103986872?v=4">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/38658854?v=4">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer">
-  <meta name="twitter:description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Systems Architect, Full-Stack Engineer, and AI Researcher.">
-  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/103986872?v=4">
+  <meta name="twitter:title" content="Rifky Akhmad Fernanda | Full-Stack Engineer & Systems Architect">
+  <meta name="twitter:description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Full-Stack Engineer & Systems Architect.">
+  <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/38658854?v=4">
 
   <!-- Schema.org Rich JSON-LD -->
   <script type="application/ld+json">
@@ -39,8 +39,8 @@
         "name": "Rifky Akhmad Fernanda",
         "alternateName": "RifkyA911",
         "url": "https://rifkya911.github.io",
-        "image": "https://avatars.githubusercontent.com/u/103986872?v=4",
-        "jobTitle": "Systems Architect & Full-Stack Engineer",
+        "image": "https://avatars.githubusercontent.com/u/38658854?v=4",
+        "jobTitle": "Full-Stack Engineer & Systems Architect",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Bojonegoro",
@@ -298,8 +298,74 @@
     }
 
     /* SECTION ANCHOR OFFSET */
-    #spectrum, #repo-grid, section[id] {
+    #profile, #spectrum, #systems-heading, #repo-grid, #terminal, section[id] {
       scroll-margin-top: 85px;
+    }
+
+    /* AMBIENT GLOWING FADING ORBS */
+    .ambient-orb {
+      position: absolute;
+      border-radius: 50%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.12;
+      filter: blur(100px);
+      transition: background 0.4s ease, opacity 0.4s ease;
+    }
+    .orb-1 {
+      top: 60px;
+      right: 5%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    }
+    .orb-2 {
+      top: 1350px;
+      left: -80px;
+      width: 520px;
+      height: 520px;
+      background: radial-gradient(circle, var(--accent) 0%, transparent 70%);
+      opacity: 0.09;
+      filter: blur(120px);
+    }
+    .orb-3 {
+      top: 2600px;
+      right: -60px;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+      opacity: 0.11;
+      filter: blur(110px);
+    }
+    [data-mode="light"] .ambient-orb {
+      opacity: 0.05;
+      filter: blur(120px);
+    }
+
+    /* SECTION COLLAPSIBLE CONTROLS */
+    .section-fold-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text-muted);
+      cursor: pointer;
+      font-size: 0.8rem;
+      font-family: monospace;
+      font-weight: 600;
+      transition: all 0.2s ease;
+    }
+    .section-fold-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+    .section-fold-chevron {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      font-size: 0.75rem;
     }
 
     /* AMBIENT CHAOTIC FLOATING PARTICLES CANVAS */
@@ -1250,6 +1316,7 @@
       padding: 2.5rem 1.5rem;
       z-index: 10;
       margin-top: 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
     }
     .footer-content {
       max-width: 1240px;
@@ -1265,17 +1332,18 @@
     }
     .footer-left {
       font-size: 0.88rem;
-      color: var(--text-muted);
+      color: rgba(241, 245, 249, 0.75);
     }
     .footer-left strong {
-      color: var(--text-heading);
+      color: #ffffff;
+      font-weight: 700;
     }
     .footer-right {
       display: flex;
       gap: 1.5rem;
     }
     .footer-link {
-      color: var(--text-muted);
+      color: rgba(241, 245, 249, 0.75);
       text-decoration: none;
       font-size: 0.88rem;
       font-weight: 500;
@@ -1291,6 +1359,11 @@
   <!-- AMBIENT CHAOTIC PARTICLES CANVAS -->
   <canvas id="ambient-particles" aria-hidden="true"></canvas>
 
+  <!-- AMBIENT GLOWING FADING ORBS -->
+  <div class="ambient-orb orb-1" aria-hidden="true"></div>
+  <div class="ambient-orb orb-2" aria-hidden="true"></div>
+  <div class="ambient-orb orb-3" aria-hidden="true"></div>
+
   <!-- NAVIGATION HEADER -->
   <header>
     <div class="nav-container">
@@ -1300,8 +1373,10 @@
       </a>
 
       <nav class="nav-links">
+        <a href="#profile" class="nav-link">Overview</a>
         <a href="#spectrum" class="nav-link" data-i18n="nav_spectrum">Tech Spectrum</a>
-        <a href="#repo-grid" class="nav-link" data-i18n="nav_systems">Systems & Repos</a>
+        <a href="#systems-heading" class="nav-link" data-i18n="nav_systems">Systems &amp; Repos</a>
+        <a href="#repo-grid" class="nav-link">Catalog</a>
         <a href="javascript:void(0)" id="term-nav-link" class="nav-link">CLI Terminal</a>
       </nav>
 
@@ -1381,7 +1456,7 @@
 
   <!-- HERO SECTION -->
   <main>
-    <section class="hero">
+    <section class="hero" id="profile">
       <div class="hero-avatar-wrapper">
         <div class="avatar-ring">
           <img src="https://avatars.githubusercontent.com/u/38658854?v=4" 
@@ -1399,7 +1474,7 @@
       </div>
 
       <h1 class="hero-title">Rifky Akhmad Fernanda</h1>
-      <p class="hero-subtitle" data-i18n="hero_subtitle">Systems Architect &bull; Full-Stack Engineer &bull; AI Agent Researcher</p>
+      <p class="hero-subtitle" data-i18n="hero_subtitle">Full-Stack Engineer &bull; Systems Architect &bull; AI Agent Researcher</p>
       <p class="hero-desc" data-i18n="hero_desc">
         Specializing in high-throughput distributed microservices, reactive frontends, and autonomous LLM orchestration workflows. Based in Bojonegoro, East Java, Indonesia.
       </p>
@@ -1421,9 +1496,12 @@
           <h2 class="section-title" data-i18n="spectrum_title">Architecture &amp; Technology Spectrum</h2>
           <p class="section-subtitle" data-i18n="spectrum_subtitle">Engineered proficiencies, modern runtimes, and verified toolchains.</p>
         </div>
+        <button class="section-fold-btn" data-target="spectrum-accordion-list" aria-expanded="true" title="Collapse / Expand Spectrum">
+          <span class="fold-btn-text">Collapse</span> <span class="section-fold-chevron">▼</span>
+        </button>
       </div>
 
-      <div class="spectrum-accordion-list">
+      <div class="spectrum-accordion-list" id="spectrum-accordion-list">
         
       <details class="spectrum-card" open>
         <summary class="spectrum-summary">
@@ -1673,9 +1751,16 @@
         <h2 class="systems-main-title" data-i18n="systems_title">Engineered Systems &amp; Codebase Matrix</h2>
         <p class="systems-main-desc" data-i18n="systems_desc">
           Production backends, autonomous multi-agent pipelines, and distributed modules engineered with high throughput and proven reliability.
-        </p>
+        <div style="margin-top: 1.25rem; display: flex; justify-content: flex-start;">
+          <button class="section-fold-btn" data-target="catalog-wrapper" aria-expanded="true" title="Collapse / Expand Systems Catalog">
+            <span class="fold-btn-text">Collapse Catalog</span> <span class="section-fold-chevron">▼</span>
+          </button>
+        </div>
       </div>
     </section>
+
+    <!-- COLLAPSIBLE CATALOG WRAPPER -->
+    <div id="catalog-wrapper" class="transition-all">
 
     <!-- REPO FILTER & GRID -->
     <div class="filter-bar">
@@ -3699,6 +3784,7 @@
         </div>
       </article>
     </section>
+    </div> <!-- #catalog-wrapper -->
   </main>
 
   <!-- FLUID OCEAN WAVE TRANSITION ABOVE FOOTER -->
@@ -3719,7 +3805,7 @@
   <footer>
     <div class="footer-content">
       <div class="footer-left">
-        <strong>Rifky Akhmad Fernanda</strong> &bull; Systems Architect &amp; Engineer<br>
+        <strong>Rifky Akhmad Fernanda</strong> &bull; Full-Stack Engineer &amp; Systems Architect<br>
         <span style="font-size: 0.8rem; opacity: 0.8;">Bojonegoro, East Java, Indonesia &bull; High Reliability by Design</span>
       </div>
       <div class="footer-right">
@@ -4016,6 +4102,23 @@
 
       applyTheme(currentTheme);
       applyMode(currentMode);
+
+      // Section Fold Toggles
+      document.querySelectorAll(".section-fold-btn").forEach(btn => {
+        btn.addEventListener("click", () => {
+          const targetId = btn.getAttribute("data-target");
+          const target = document.getElementById(targetId);
+          if (!target) return;
+          const isExp = btn.getAttribute("aria-expanded") === "true";
+          const newExp = !isExp;
+          btn.setAttribute("aria-expanded", newExp ? "true" : "false");
+          target.style.display = newExp ? "" : "none";
+          const textEl = btn.querySelector(".fold-btn-text");
+          if (textEl) {
+            textEl.textContent = newExp ? (btn.getAttribute("data-target") === "catalog-wrapper" ? "Collapse Catalog" : "Collapse") : "Expand";
+          }
+        });
+      });
 
       // 3. CONTACT MODAL LOGIC
       const contactModal = document.getElementById("contact-modal");

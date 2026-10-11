@@ -13,9 +13,9 @@
 
 ## 🌐 Overview
 
-This repository hosts the official web hub and open-source directory for **Rifky Akhmad F. ([@RifkyA911](https://github.com/RifkyA911))**, served live on **[https://rifkya911.github.io](https://rifkya911.github.io)** via GitHub Pages.
+This repository hosts the official web hub and open-source directory for **Rifky Akhmad Fernanda ([@RifkyA911](https://github.com/RifkyA911))** &mdash; **Full-Stack Engineer & Systems Architect**, served live on **[https://rifkya911.github.io](https://rifkya911.github.io)** via GitHub Pages.
 
-It acts as a centralized index for 45+ public software projects, libraries, and system architectures across **Rust**, **TypeScript**, **Go**, **PHP**, and **AI platforms**.
+It acts as a centralized index for 49+ public software projects, libraries, and system architectures across **Rust**, **TypeScript**, **Go**, **PHP**, and **AI platforms**.
 
 ---
 
