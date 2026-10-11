@@ -61,9 +61,9 @@
           "position": 1,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "RifkyA911",
-            "description": "RifkyA911 GitHub profile",
-            "codeRepository": "https://github.com/RifkyA911/RifkyA911",
+            "name": "mirunova-live",
+            "description": "Next-Gen Web Live2D & 3D Avatar Vision Tracker \u2022 100% Client-Side \u2022 Powered by Bun & SvelteKit",
+            "codeRepository": "https://github.com/RifkyA911/mirunova-live",
             "author": {
               "@type": "Person",
               "name": "Rifky Akhmad F",
@@ -76,9 +76,9 @@
           "position": 2,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "mirunova-live",
-            "description": "Next-Gen Web Live2D & 3D Avatar Vision Tracker \u2022 100% Client-Side \u2022 Powered by Bun & SvelteKit",
-            "codeRepository": "https://github.com/RifkyA911/mirunova-live",
+            "name": "RifkyA911",
+            "description": "RifkyA911 GitHub profile",
+            "codeRepository": "https://github.com/RifkyA911/RifkyA911",
             "author": {
               "@type": "Person",
               "name": "Rifky Akhmad F",
@@ -978,25 +978,32 @@
        ======================================================== */
     .term-toggle-btn {
       position: fixed;
-      bottom: 1.75rem;
-      right: 1.75rem;
+      bottom: 1.5rem;
+      right: 1.5rem;
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
-      gap: 0.6rem;
-      padding: 0.7rem 1.25rem;
+      justify-content: center;
       background: rgba(22, 27, 34, 0.95);
       border: 1.5px solid #388bfd;
-      border-radius: 9999px;
-      color: #58a6ff;
+      border-radius: 50%;
+      color: #7ee787;
       font-family: "Fira Code", SFMono-Regular, Consolas, Menlo, monospace;
-      font-size: 0.92rem;
-      font-weight: 600;
+      font-size: 1.15rem;
+      font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), 0 0 20px rgba(88, 166, 255, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(88, 166, 255, 0.35);
       backdrop-filter: blur(12px);
       z-index: 9999;
       transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
       user-select: none;
+    }
+    .term-toggle-btn:hover {
+      border-color: #58a6ff;
+      color: #ffffff;
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(88, 166, 255, 0.55);
     }
 
     .term-toggle-btn:hover {
@@ -2120,11 +2127,9 @@
     </footer>
   </div>
 
-  <!-- STICKY BUTTON: INTERACTIVE TERMINAL CLI -->
-  <button id="term-toggle-btn" class="term-toggle-btn" aria-label="Open Interactive CLI Terminal" title="Open Interactive CLI (Ctrl + `)">
+  <!-- STICKY BUTTON: INTERACTIVE TERMINAL CLI (ICON ONLY) -->
+  <button id="term-toggle-btn" class="term-toggle-btn" aria-label="Open Terminal CLI" title="Open Terminal CLI (Ctrl + `)">
     <span class="term-btn-icon">&gt;_</span>
-    <span class="term-btn-label">Terminal</span>
-    <span class="term-btn-badge">CLI</span>
   </button>
 
   <!-- INTERACTIVE TERMINAL MODAL -->
@@ -2463,10 +2468,10 @@
         }
       }
 
-      function htmlEscape(str) {{
+      function htmlEscape(str) {
         return str.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-      }}
-    }})();
+      }
+    })();
   </script>
 </body>
 </html>
