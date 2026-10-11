@@ -298,8 +298,8 @@
       scroll-margin-top: 85px;
     }
 
-    /* ANIMATED LOOPING DOT BACKDROP */
-    .animated-dots-bg {
+    /* AMBIENT CHAOTIC FLOATING PARTICLES CANVAS */
+    #ambient-particles {
       position: fixed;
       top: 0;
       left: 0;
@@ -307,48 +307,6 @@
       height: 100vh;
       pointer-events: none;
       z-index: 0;
-      background-image: radial-gradient(var(--grid-dot) 1.25px, transparent 1.25px);
-      background-size: 32px 32px;
-      animation: dotMatrixLoop 24s linear infinite;
-      opacity: 0.55;
-    }
-    @keyframes dotMatrixLoop {
-      0% {
-        background-position: 0 0;
-      }
-      100% {
-        background-position: 32px 32px;
-      }
-    }
-
-    /* CLEAN KOTAK-KOTAK MESH (NO INNER DOTS) */
-    .mesh-grid-overlay {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.45;
-      background-image:
-        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
-      background-size: 32px 32px;
-    }
-
-    /* AMBIENT GLOW BACKDROP */
-    .ambient-glow {
-      position: fixed;
-      top: -150px;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 750px;
-      height: 450px;
-      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.55;
     }
 
     /* NAVBAR REDESIGN */
@@ -525,7 +483,7 @@
       font-size: 0.8rem;
     }
 
-    /* HERO SECTION WITH CENTERED PROFILE PHOTO & ACTIVE STATUS */
+        /* HERO SECTION WITH CENTERED PROFILE PHOTO & ACTIVE STATUS */
     .hero {
       position: relative;
       z-index: 1;
@@ -772,16 +730,17 @@
       box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35);
     }
 
-    /* REPO THUMBNAIL PREVIEW */
+    /* REPO THUMBNAIL PREVIEW - STANDARDIZED 130PX HEIGHT WITH FALLBACK */
     .repo-thumb-wrapper {
       width: 100%;
-      height: 140px;
+      height: 130px;
       border-radius: 8px;
       overflow: hidden;
-      background: rgba(0, 0, 0, 0.25);
+      background: rgba(0, 0, 0, 0.35);
       margin-bottom: 0.85rem;
       border: 1px solid var(--card-border);
       position: relative;
+      flex-shrink: 0;
     }
     .repo-thumb-img {
       width: 100%;
@@ -792,6 +751,53 @@
     }
     .repo-card:hover .repo-thumb-img {
       transform: scale(1.02);
+    }
+    .repo-fallback-banner {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.5) 100%);
+      padding: 1rem;
+      text-align: center;
+      position: relative;
+    }
+    .fallback-circuit-lines {
+      position: absolute;
+      inset: 0;
+      opacity: 0.15;
+      background-image: radial-gradient(var(--primary) 1.2px, transparent 1.2px);
+      background-size: 16px 16px;
+    }
+    .fallback-badge {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+    .fallback-lang {
+      font-size: 0.72rem;
+      font-family: monospace;
+      font-weight: 700;
+      color: var(--primary);
+      padding: 0.2rem 0.65rem;
+      border-radius: 9999px;
+      background: var(--tag-bg);
+      border: 1px solid var(--card-border);
+    }
+    .fallback-name {
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      letter-spacing: -0.2px;
+      max-width: 250px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
     .card-header {
@@ -1190,50 +1196,56 @@
       color: #ffffff;
     }
 
-    /* SOLID FOOTER WITH ANIMATED FLUID OCEAN WAVES */
-    footer {
+    /* FLUID OCEAN WAVE TRANSITION ABOVE FOOTER */
+    .footer-wave-wrapper {
       position: relative;
-      background: var(--footer-solid);
-      border-top: 1px solid var(--card-border);
-      padding-top: 3.5rem;
-      padding-bottom: 2.5rem;
-      overflow: hidden;
-      z-index: 10;
-    }
-    .ocean-wave-container {
-      position: absolute;
-      top: 0;
-      left: 0;
       width: 100%;
+      height: 75px;
+      margin-top: 4rem;
+      margin-bottom: -2px; /* Flawless zero-gap transition into footer */
       overflow: hidden;
       line-height: 0;
+      background: linear-gradient(to bottom, transparent 0%, rgba(6, 9, 14, 0.45) 100%);
       pointer-events: none;
+      z-index: 5;
     }
     .ocean-wave-svg {
       position: relative;
       display: block;
-      width: calc(150% + 1.3px);
-      height: 48px;
+      width: 100%;
+      height: 75px;
     }
-    .wave-path-1 {
+    .wave-layer-1 {
       fill: var(--primary);
-      opacity: 0.15;
-      animation: waveMove1 12s linear infinite;
+      opacity: 0.18;
+      animation: waveMove 12s cubic-bezier(.55,.5,.45,.5) infinite;
     }
-    .wave-path-2 {
+    .wave-layer-2 {
       fill: var(--accent);
-      opacity: 0.12;
-      animation: waveMove2 18s linear infinite;
+      opacity: 0.22;
+      animation: waveMove 16s cubic-bezier(.55,.5,.45,.5) -5s infinite;
     }
-    @keyframes waveMove1 {
-      0% { transform: translateX(0); }
-      50% { transform: translateX(-25%); }
-      100% { transform: translateX(0); }
+    .wave-layer-3 {
+      fill: var(--primary-hover);
+      opacity: 0.28;
+      animation: waveMove 9s cubic-bezier(.55,.5,.45,.5) -2s infinite;
     }
-    @keyframes waveMove2 {
-      0% { transform: translateX(-25%); }
-      50% { transform: translateX(0); }
-      100% { transform: translateX(-25%); }
+    .wave-layer-4 {
+      fill: var(--footer-solid);
+      opacity: 1; /* Seamlessly matches footer background! */
+      animation: waveMove 7s cubic-bezier(.55,.5,.45,.5) -4s infinite;
+    }
+    @keyframes waveMove {
+      0% { transform: translate3d(-90px, 0, 0); }
+      100% { transform: translate3d(85px, 0, 0); }
+    }
+
+    footer {
+      position: relative;
+      background: var(--footer-solid);
+      padding: 2.5rem 1.5rem;
+      z-index: 10;
+      margin-top: 0;
     }
     .footer-content {
       max-width: 1240px;
@@ -1272,10 +1284,8 @@
 </head>
 <body>
 
-  <!-- BACKGROUND LAYERS -->
-  <div class="animated-dots-bg" aria-hidden="true"></div>
-  <div class="mesh-grid-overlay" aria-hidden="true"></div>
-  <div class="ambient-glow" aria-hidden="true"></div>
+  <!-- AMBIENT CHAOTIC PARTICLES CANVAS -->
+  <canvas id="ambient-particles" aria-hidden="true"></canvas>
 
   <!-- NAVIGATION HEADER -->
   <header>
@@ -1676,40 +1686,6 @@
 
     <section id="repo-grid" class="grid-container">
       
-      <article class="repo-card" data-category="ai" data-name="rifkya911.github.io" data-featured="false">
-        <div class="repo-thumb-wrapper">
-          <img src="https://opengraph.githubassets.com/1/RifkyA911/RifkyA911.github.io" 
-               alt="RifkyA911.github.io preview" 
-               class="repo-thumb-img" 
-               loading="lazy" 
-               referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
-        </div>
-        <div class="card-header">
-          <div class="card-title-group">
-            <span class="repo-icon">📦</span>
-            <h3 class="repo-title">
-              <a href="https://github.com/RifkyA911/RifkyA911.github.io" target="_blank" rel="noopener noreferrer">RifkyA911.github.io</a>
-            </h3>
-          </div>
-          
-        </div>
-        <p class="repo-desc">Rifky Akhmad F. — Systems Architecture, AI Platforms & Open Source Hub</p>
-        <div class="card-footer">
-          <div class="repo-meta">
-            <span class="meta-tag meta-lang"><span class="lang-dot"></span>HTML</span>
-            <span class="meta-tag meta-stars">★ 0</span>
-            <span class="meta-tag meta-forks">⑂ 0</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/RifkyA911/RifkyA911.github.io" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for RifkyA911.github.io">
-              <span>Code</span> ↗
-            </a>
-            <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> ↗</a>
-          </div>
-        </div>
-      </article>
-
       <article class="repo-card" data-category="ai" data-name="mirunova-live" data-featured="true">
         <div class="repo-thumb-wrapper">
           <img src="https://opengraph.githubassets.com/1/RifkyA911/mirunova-live" 
@@ -1717,7 +1693,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Svelte</span>
+              <span class="fallback-name">mirunova-live</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1744,6 +1727,47 @@
         </div>
       </article>
 
+      <article class="repo-card" data-category="ai" data-name="rifkya911.github.io" data-featured="false">
+        <div class="repo-thumb-wrapper">
+          <img src="https://opengraph.githubassets.com/1/RifkyA911/RifkyA911.github.io" 
+               alt="RifkyA911.github.io preview" 
+               class="repo-thumb-img" 
+               loading="lazy" 
+               referrerpolicy="no-referrer"
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">HTML</span>
+              <span class="fallback-name">RifkyA911.github.io</span>
+            </div>
+          </div>
+        </div>
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="repo-icon">📦</span>
+            <h3 class="repo-title">
+              <a href="https://github.com/RifkyA911/RifkyA911.github.io" target="_blank" rel="noopener noreferrer">RifkyA911.github.io</a>
+            </h3>
+          </div>
+          
+        </div>
+        <p class="repo-desc">Rifky Akhmad F. — Systems Architecture, AI Platforms & Open Source Hub</p>
+        <div class="card-footer">
+          <div class="repo-meta">
+            <span class="meta-tag meta-lang"><span class="lang-dot"></span>HTML</span>
+            <span class="meta-tag meta-stars">★ 0</span>
+            <span class="meta-tag meta-forks">⑂ 0</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/RifkyA911/RifkyA911.github.io" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for RifkyA911.github.io">
+              <span>Code</span> ↗
+            </a>
+            <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> ↗</a>
+          </div>
+        </div>
+      </article>
+
       <article class="repo-card" data-category="tools" data-name="rifkya911" data-featured="false">
         <div class="repo-thumb-wrapper">
           <img src="https://opengraph.githubassets.com/1/RifkyA911/RifkyA911" 
@@ -1751,7 +1775,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Code</span>
+              <span class="fallback-name">RifkyA911</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1785,7 +1816,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Astro</span>
+              <span class="fallback-name">PawFec-Company-Profile</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1819,7 +1857,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Rust</span>
+              <span class="fallback-name">NovaSentry</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1853,7 +1898,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Vue</span>
+              <span class="fallback-name">Momentum-Habit-Tracker-Plan</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1887,7 +1939,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">C#</span>
+              <span class="fallback-name">agy-cli-account-swarm</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1921,7 +1980,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Blade</span>
+              <span class="fallback-name">TapVote-AI</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1955,7 +2021,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">JavaScript</span>
+              <span class="fallback-name">Realtime-E-Vote</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -1989,7 +2062,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">NovaFinance-Frontend</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2023,7 +2103,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">NovaFinance-Backend</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2057,7 +2144,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Svelte</span>
+              <span class="fallback-name">Mobee-API-Client</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2091,7 +2185,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">HTML</span>
+              <span class="fallback-name">9router-playground</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2125,7 +2226,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Partner-Flow-Be</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2159,7 +2267,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Partner-Flow-FE</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2193,7 +2308,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">NovaStack-Next.JS-16-Project-Engine</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2227,7 +2349,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Aice-Tangsel-Referral-Partners</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2261,7 +2390,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Go</span>
+              <span class="fallback-name">Management-Inventory-Golang-Native</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2295,7 +2431,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Simple-Catalogue-Product</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2329,7 +2472,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Blade</span>
+              <span class="fallback-name">Sales-Management</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2363,7 +2513,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">Simple-CRUD-Laravel-12</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2397,7 +2554,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">My-Portofolio-ShowCase</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2431,7 +2595,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">JavaScript</span>
+              <span class="fallback-name">Basic-Website-Application--City-Air-Quality</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2465,7 +2636,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">Simple-CRUD-Auth-Laravel-9-MongoDB</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2499,7 +2677,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">CSS</span>
+              <span class="fallback-name">Web-IOT-WebSocket-Inkubator</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2533,7 +2718,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Visual Basic 6.0</span>
+              <span class="fallback-name">String-Manipulation_VB10</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2567,7 +2759,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Go</span>
+              <span class="fallback-name">Simple-Inventory-API-Go-Native</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2601,7 +2800,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Daya-Arsana</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2635,7 +2841,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">HTML</span>
+              <span class="fallback-name">Company-Profile-Legia</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2669,7 +2882,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Simple-Pagination-Server-Side</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2703,7 +2923,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Rust</span>
+              <span class="fallback-name">Invitation-App-API</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2737,7 +2964,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Jupyter Notebook</span>
+              <span class="fallback-name">Real-ESRGAN-Video-Upscaling-Automation</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2771,7 +3005,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Rust</span>
+              <span class="fallback-name">Simple-Ticketing-System-Rust-Native</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2805,7 +3046,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Next.JS-15-Project-Engine</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2839,7 +3087,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Blade</span>
+              <span class="fallback-name">Insta-App-API</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2873,7 +3128,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Insta-App-Frontend</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2907,7 +3169,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Simple-Gemini-Chatbot-API</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2941,7 +3210,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Simple-Gemini-AI-Prompt-API</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -2975,7 +3251,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">E-commerce_Native_PHP-PSSK</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3009,7 +3292,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">JavaScript</span>
+              <span class="fallback-name">Portofolio-Ecommerce-Fullstack-React-Laravel</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3043,7 +3333,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Top-Up-Games-with-POS-System</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3077,7 +3374,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">TypeScript</span>
+              <span class="fallback-name">Haruka-Bot-Discord-Node-Api</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3111,7 +3415,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">Bot-Telegram-Monitoring</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3145,7 +3456,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">Jupyter Notebook</span>
+              <span class="fallback-name">K-Means-Clustering-Implementation</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3179,7 +3497,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">C</span>
+              <span class="fallback-name">Simple-C-Login-Student</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3213,7 +3538,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">C++</span>
+              <span class="fallback-name">Sorting-Data-With-C-Code</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3247,7 +3579,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">Calculator-Bot-for-Volume-and-Surface-Area-of-3D-Shapes-Via-Telegram</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3281,7 +3620,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">PHP</span>
+              <span class="fallback-name">Inventory-Web-App-IBMAETER-</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3315,7 +3661,14 @@
                class="repo-thumb-img" 
                loading="lazy" 
                referrerpolicy="no-referrer"
-               onerror="this.closest('.repo-thumb-wrapper').style.display='none';" />
+               onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+          <div class="repo-fallback-banner" style="display: none;">
+            <div class="fallback-circuit-lines"></div>
+            <div class="fallback-badge">
+              <span class="fallback-lang">CSS</span>
+              <span class="fallback-name">API_Rekeningku.com_Fetch</span>
+            </div>
+          </div>
         </div>
         <div class="card-header">
           <div class="card-title-group">
@@ -3344,20 +3697,22 @@
     </section>
   </main>
 
-  <!-- SOLID FOOTER WITH WAVE ANIMATION -->
-  <footer>
-    <div class="ocean-wave-container" aria-hidden="true">
-      <svg class="ocean-wave-svg" viewBox="0 24 150 28" preserveAspectRatio="none">
-        <defs>
-          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
-        </defs>
-        <g>
-          <use href="#gentle-wave" x="48" y="0" class="wave-path-1" />
-          <use href="#gentle-wave" x="48" y="3" class="wave-path-2" />
-        </g>
-      </svg>
-    </div>
+  <!-- FLUID OCEAN WAVE TRANSITION ABOVE FOOTER -->
+  <div class="footer-wave-wrapper" aria-hidden="true">
+    <svg class="ocean-wave-svg" viewBox="0 24 150 28" preserveAspectRatio="none">
+      <defs>
+        <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+      </defs>
+      <g>
+        <use href="#gentle-wave" x="48" y="0" class="wave-layer-1" />
+        <use href="#gentle-wave" x="48" y="3" class="wave-layer-2" />
+        <use href="#gentle-wave" x="48" y="5" class="wave-layer-3" />
+        <use href="#gentle-wave" x="48" y="7" class="wave-layer-4" />
+      </g>
+    </svg>
+  </div>
 
+  <footer>
     <div class="footer-content">
       <div class="footer-left">
         <strong>Rifky Akhmad Fernanda</strong> &bull; Systems Architect &amp; Engineer<br>
@@ -3452,6 +3807,62 @@
   </div>
 
   <script>
+    // AMBIENT CHAOTIC FLOATING PARTICLES CANVAS
+    const canvas = document.getElementById("ambient-particles");
+    if (canvas) {
+      const ctx = canvas.getContext("2d");
+      let width = canvas.width = window.innerWidth;
+      let height = canvas.height = window.innerHeight;
+
+      window.addEventListener("resize", () => {
+        width = canvas.width = window.innerWidth;
+        height = canvas.height = window.innerHeight;
+      });
+
+      const particleCount = 48;
+      const particles = [];
+      for (let i = 0; i < particleCount; i++) {
+        particles.push({
+          x: Math.random() * width,
+          y: Math.random() * height,
+          radius: Math.random() * 1.5 + 1.2,
+          vx: (Math.random() - 0.5) * 0.45,
+          vy: (Math.random() - 0.5) * 0.45,
+          alpha: Math.random() * 0.4 + 0.25
+        });
+      }
+
+      function getDotColor() {
+        const style = getComputedStyle(document.documentElement);
+        return style.getPropertyValue("--primary").trim() || "#388bfd";
+      }
+
+      function renderParticles() {
+        ctx.clearRect(0, 0, width, height);
+        const color = getDotColor();
+        
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx;
+          p.y += p.vy;
+
+          if (p.x < 0) p.x = width;
+          if (p.x > width) p.x = 0;
+          if (p.y < 0) p.y = height;
+          if (p.y > height) p.y = 0;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
+          ctx.fillStyle = color;
+          ctx.globalAlpha = p.alpha;
+          ctx.fill();
+        }
+        ctx.globalAlpha = 1.0;
+        requestAnimationFrame(renderParticles);
+      }
+      renderParticles();
+    }
+
     document.addEventListener("DOMContentLoaded", () => {
       // 1. I18N DICTIONARY
       const translations = {
