@@ -893,6 +893,71 @@
       color: #ffffff;
     }
 
+    /* CONTEXTUAL SVG CIRCUIT DIVIDER & SYSTEMS HEADER */
+    .systems-section-header {
+      position: relative;
+      max-width: 1240px;
+      margin: 3.5rem auto 1rem auto;
+      padding: 0 1.5rem;
+      text-align: center;
+      z-index: 1;
+    }
+    .tech-circuit-divider {
+      width: 100%;
+      max-width: 1000px;
+      margin: 0 auto 1.25rem auto;
+      overflow: hidden;
+      line-height: 0;
+    }
+    .circuit-svg {
+      width: 100%;
+      height: 70px;
+      display: block;
+    }
+    .pulse-node {
+      animation: pulseCircuit 2.5s infinite ease-in-out;
+      transform-origin: center;
+    }
+    @keyframes pulseCircuit {
+      0%, 100% { transform: scale(1); opacity: 0.3; }
+      50% { transform: scale(1.6); opacity: 0.8; }
+    }
+    .systems-badge-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.3rem 0.85rem;
+      border-radius: 9999px;
+      background: var(--tag-bg);
+      border: 1px solid var(--card-border);
+      color: var(--tag-text);
+      font-size: 0.74rem;
+      font-weight: 700;
+      letter-spacing: 0.75px;
+      font-family: monospace;
+      margin-bottom: 0.75rem;
+    }
+    .pill-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--primary);
+    }
+    .systems-main-title {
+      font-size: 1.85rem;
+      font-weight: 800;
+      color: var(--text-heading);
+      letter-spacing: -0.5px;
+      margin-bottom: 0.5rem;
+    }
+    .systems-main-desc {
+      max-width: 680px;
+      margin: 0 auto;
+      color: var(--text-muted);
+      font-size: 0.94rem;
+      line-height: 1.6;
+    }
+
     /* FLOATING TERMINAL TOGGLE BUTTON */
     .term-toggle-btn {
       position: fixed;
@@ -1556,6 +1621,45 @@
           </div>
         </div>
       </details>
+      </div>
+    </section>
+
+    <!-- CONTEXTUAL SVG HEADER BELOW TECH SPECTRUM -->
+    <section class="systems-section-header" id="systems-heading">
+      <div class="tech-circuit-divider" aria-hidden="true">
+        <svg viewBox="0 0 1200 120" fill="none" xmlns="http://www.w3.org/2000/svg" class="circuit-svg">
+          <!-- Central Data Bus & Interconnect Traces -->
+          <path d="M0 60 H420 L460 20 H740 L780 60 H1200" stroke="var(--primary)" stroke-width="1.8" stroke-dasharray="8 6" opacity="0.65" />
+          <path d="M120 60 L160 100 H360 L400 60" stroke="var(--accent)" stroke-width="1.5" opacity="0.55" />
+          <path d="M800 60 L840 100 H1040 L1080 60" stroke="var(--accent)" stroke-width="1.5" opacity="0.55" />
+          
+          <!-- Microchip Core Symbol in Center -->
+          <rect x="530" y="2" width="140" height="36" rx="8" fill="var(--card-bg)" stroke="var(--primary)" stroke-width="1.5" />
+          <text x="600" y="23" text-anchor="middle" fill="var(--text-heading)" font-family="monospace" font-size="11" font-weight="bold" letter-spacing="2">SYSTEMS BUS</text>
+          
+          <!-- Data Packet Nodes -->
+          <circle cx="460" cy="20" r="4.5" fill="var(--primary)" />
+          <circle cx="740" cy="20" r="4.5" fill="var(--primary)" />
+          <circle cx="160" cy="100" r="3.5" fill="var(--accent)" />
+          <circle cx="360" cy="100" r="3.5" fill="var(--accent)" />
+          <circle cx="840" cy="100" r="3.5" fill="var(--accent)" />
+          <circle cx="1040" cy="100" r="3.5" fill="var(--accent)" />
+          
+          <!-- Animated Pulse Wave Packets -->
+          <circle cx="460" cy="20" r="9" stroke="var(--primary)" stroke-width="1.2" opacity="0.5" class="pulse-node" />
+          <circle cx="740" cy="20" r="9" stroke="var(--primary)" stroke-width="1.2" opacity="0.5" class="pulse-node" />
+        </svg>
+      </div>
+
+      <div class="systems-header-content">
+        <div class="systems-badge-pill">
+          <span class="pill-dot"></span>
+          <span data-i18n="systems_rail_tag">DEPLOYED RUNTIMES • MICROSERVICES • OPEN SOURCE</span>
+        </div>
+        <h2 class="systems-main-title" data-i18n="systems_title">Engineered Systems &amp; Codebase Matrix</h2>
+        <p class="systems-main-desc" data-i18n="systems_desc">
+          Production backends, autonomous multi-agent pipelines, and distributed modules engineered with high throughput and proven reliability.
+        </p>
       </div>
     </section>
 
@@ -3371,6 +3475,9 @@
           tab_frontend: "Frontend & Apps",
           tab_tools: "Tooling & Infra",
           badge_featured: "Featured",
+          systems_rail_tag: "DEPLOYED RUNTIMES • MICROSERVICES • OPEN SOURCE",
+          systems_title: "Engineered Systems & Codebase Matrix",
+          systems_desc: "Production backends, autonomous multi-agent pipelines, and distributed modules engineered with high throughput and proven reliability.",
           contact_modal_title: "Direct Contact & Channels"
         },
         id: {
@@ -3393,6 +3500,9 @@
           tab_frontend: "Frontend & Aplikasi",
           tab_tools: "Tooling & Infrastruktur",
           badge_featured: "Unggulan",
+          systems_rail_tag: "RUNTIME TERUJI • MICROSERVICES • OPEN SOURCE",
+          systems_title: "Matriks Sistem & Basis Kode Teruji",
+          systems_desc: "Backend produksi, pipeline multi-agent otonom, dan modul terdistribusi dengan throughput tinggi dan keandalan terbukti.",
           contact_modal_title: "Kontak Langsung & Kanal"
         }
       };
