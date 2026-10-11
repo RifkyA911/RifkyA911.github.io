@@ -15,7 +15,7 @@
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
   <meta property="og:title" content="Rifky Akhmad F. (RifkyA911) | Systems Architecture & Open Source Hub">
-  <meta property="og:description" content="Explore 45+ production systems, AI security sentries, MCP servers, and concurrent engines built by Rifky Akhmad Fernanda.">
+  <meta property="og:description" content="Explore 49+ production systems, AI security sentries, MCP servers, and concurrent engines built by Rifky Akhmad Fernanda.">
   <meta property="og:url" content="https://rifkya911.github.io/">
   <meta property="og:site_name" content="RifkyA911 Hub">
   <meta property="og:locale" content="en_US">
@@ -230,7 +230,28 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* KOTAK-KOTAK MESH OVERLAY OPACITY 45% */
+    /* 1. ANIMATED LOOPING BACKDROP DOT PATTERN */
+    @keyframes dotDrift {
+      0% { background-position: 0 0, 0 0; }
+      100% { background-position: 32px 32px, -32px 32px; }
+    }
+    .animated-dots-backdrop {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.45;
+      background-image:
+        radial-gradient(var(--mesh-color) 1.5px, transparent 1.5px),
+        radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
+      background-size: 32px 32px, 64px 64px;
+      animation: dotDrift 28s linear infinite;
+    }
+
+    /* 2. KOTAK-KOTAK MESH OVERLAY OPACITY 45% */
     .mesh-grid-overlay {
       position: fixed;
       top: 0;
@@ -277,6 +298,10 @@
       color: var(--text-heading);
       font-weight: 700;
       font-size: 1.15rem;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .brand:hover {
+      transform: translateY(-2px) scale(1.04);
     }
     .brand-avatar {
       width: 34px;
@@ -302,12 +327,16 @@
       border: 1px solid var(--card-border);
       background: var(--card-bg);
       color: var(--text);
-      transition: all 0.2s ease;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s, box-shadow 0.2s;
     }
     .nav-btn:hover {
       border-color: var(--primary);
       color: var(--primary);
-      transform: translateY(-1px);
+      transform: translateY(-3px) scale(1.04);
+      box-shadow: 0 4px 14px rgba(88, 166, 255, 0.2);
+    }
+    .nav-btn:active {
+      transform: translateY(1px) scale(0.97);
     }
     .nav-btn.primary {
       background: var(--primary);
@@ -320,7 +349,7 @@
     }
     .nav-btn.primary:hover {
       background: var(--primary-hover);
-      box-shadow: 0 0 12px var(--primary);
+      box-shadow: 0 0 16px var(--primary);
     }
 
     /* HERO SECTION */
@@ -344,6 +373,10 @@
       font-weight: 600;
       margin-bottom: 1.25rem;
       border: 1px solid var(--primary);
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+    .badge-pill:hover {
+      transform: translateY(-4px) scale(1.06);
     }
     .pulse-dot {
       width: 8px;
@@ -358,6 +391,7 @@
       color: var(--text-heading);
       letter-spacing: -0.03em;
       margin-bottom: 0.8rem;
+      transition: transform 0.2s ease-out;
     }
     .hero-subtitle {
       font-size: 1.25rem;
@@ -397,11 +431,12 @@
       border-radius: 8px;
       padding: 1.1rem;
       text-align: center;
-      transition: all 0.25s ease;
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.25s;
     }
     .stat-card:hover {
       border-color: var(--primary);
-      transform: translateY(-2px);
+      transform: translateY(-6px) scale(1.03);
+      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
     }
     .stat-num {
       font-size: 1.75rem;
@@ -417,7 +452,109 @@
       margin-top: 0.2rem;
     }
 
-    /* FILTER TABS & SEARCH */
+    /* ARCHITECTURE & TECHNOLOGY SPECTRUM ACCORDION */
+    .spectrum-section {
+      position: relative;
+      z-index: 1;
+      max-width: 1240px;
+      margin: 0 auto 2.5rem auto;
+      padding: 0 1.5rem;
+    }
+    .spectrum-accordion {
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
+      transition: border-color 0.3s ease;
+    }
+    .spectrum-accordion[open] {
+      border-color: var(--primary);
+    }
+    .spectrum-summary {
+      padding: 1.1rem 1.4rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      user-select: none;
+      background: rgba(255, 255, 255, 0.02);
+      transition: background 0.2s;
+    }
+    .spectrum-summary:hover {
+      background: rgba(88, 166, 255, 0.06);
+    }
+    .spectrum-summary::-webkit-details-marker {
+      display: none;
+    }
+    .spectrum-summary-header {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+    }
+    .spectrum-summary-icon {
+      font-size: 1.6rem;
+    }
+    .spectrum-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+    .spectrum-subtitle {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+    .spectrum-chevron {
+      font-size: 0.9rem;
+      color: var(--primary);
+      transition: transform 0.3s ease;
+    }
+    .spectrum-accordion[open] .spectrum-chevron {
+      transform: rotate(180deg);
+    }
+    .spectrum-content {
+      padding: 1.25rem 1.4rem 1.75rem 1.4rem;
+      border-top: 1px solid var(--card-border);
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+    .tech-group-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.65rem;
+      letter-spacing: 0.02em;
+    }
+    .tech-icons-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.65rem;
+    }
+    .tech-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+      cursor: pointer;
+      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s, box-shadow 0.2s;
+    }
+    .tech-item:hover {
+      border-color: var(--primary);
+      transform: translateY(-5px) scale(1.08);
+      box-shadow: 0 6px 18px rgba(88, 166, 255, 0.25);
+      background: var(--tag-bg);
+    }
+    .tech-item-name {
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text);
+    }
+
+    /* CONTROLS & SEARCH */
     .controls-container {
       position: relative;
       z-index: 1;
@@ -441,11 +578,11 @@
       border-radius: 8px;
       color: var(--text-heading);
       outline: none;
-      transition: border-color 0.2s;
+      transition: border-color 0.2s, box-shadow 0.2s;
     }
     .search-input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 10px rgba(88, 166, 255, 0.2);
+      box-shadow: 0 0 12px rgba(88, 166, 255, 0.25);
     }
     .search-icon {
       position: absolute;
@@ -472,23 +609,25 @@
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
-      transition: all 0.2s ease;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), all 0.2s;
     }
     .tab-btn:hover {
       color: var(--text-heading);
       border-color: var(--primary);
+      transform: translateY(-2px);
     }
     .tab-btn.active {
       background: var(--primary);
       color: #0d1117;
       border-color: var(--primary);
+      transform: translateY(-2px);
     }
     [data-theme="matrix"] .tab-btn.active,
     [data-theme="cyberpunk"] .tab-btn.active {
       color: #000000;
     }
 
-    /* PROJECT REPOSITORY GRID */
+    /* PROJECT REPOSITORY GRID & PARALLAX SUNDUL */
     .grid-container {
       position: relative;
       z-index: 1;
@@ -498,6 +637,7 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 1.25rem;
+      perspective: 1200px;
     }
     .repo-card {
       background: var(--card-bg);
@@ -507,12 +647,14 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transform-style: preserve-3d;
+      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.3s;
     }
+    /* "SUNDUL" BOUNCE ON HOVER */
     .repo-card:hover {
       border-color: var(--card-hover-border);
-      transform: translateY(-3px);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+      transform: translateY(-8px) scale(1.025);
+      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.2);
     }
     .card-header {
       display: flex;
@@ -596,46 +738,50 @@
       color: var(--tag-text);
       text-decoration: none;
       border: 1px solid var(--primary);
-      transition: all 0.2s;
+      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), all 0.2s;
     }
     .card-link-btn:hover {
       background: var(--primary);
       color: #0d1117;
+      transform: translateY(-2px) scale(1.05);
     }
     [data-theme="matrix"] .card-link-btn:hover,
     [data-theme="cyberpunk"] .card-link-btn:hover {
       color: #000;
     }
 
-    /* FLOATING TERMINAL LAUNCH BUTTON */
+    /* FLOATING TERMINAL LAUNCH BUTTON: KOTAK ROUNDED (SQUIRCLE) */
     .term-toggle-btn {
       position: fixed;
       bottom: 1.5rem;
       right: 1.5rem;
-      width: 50px;
-      height: 50px;
+      width: 48px;
+      height: 48px;
       display: flex;
       align-items: center;
       justify-content: center;
       background: rgba(22, 27, 34, 0.95);
       border: 1.5px solid var(--primary);
-      border-radius: 50%;
+      border-radius: 12px; /* KOTAK ROUNDED */
       color: var(--primary);
       font-family: "Fira Code", SFMono-Regular, Consolas, Menlo, monospace;
-      font-size: 1.2rem;
+      font-size: 1.15rem;
       font-weight: 700;
       cursor: pointer;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(88, 166, 255, 0.35);
       backdrop-filter: blur(12px);
       z-index: 9999;
-      transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.25s;
       user-select: none;
     }
     .term-toggle-btn:hover {
       border-color: var(--primary-hover);
       color: #ffffff;
-      transform: translateY(-3px) scale(1.08);
+      transform: translateY(-4px) scale(1.12); /* SUNDUL BOUNCE */
       box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 25px var(--primary);
+    }
+    .term-toggle-btn:active {
+      transform: translateY(2px) scale(0.95);
     }
 
     /* INTERACTIVE TERMINAL MODAL */
@@ -662,7 +808,7 @@
       height: 580px;
       background: var(--terminal-bg);
       border: 1.5px solid var(--primary);
-      border-radius: 10px;
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
       box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(88, 166, 255, 0.25);
@@ -776,7 +922,10 @@
   </style>
 </head>
 <body>
-  <!-- MESH GRID OVERLAY WITH OPACITY 45% -->
+  <!-- 1. ANIMATED LOOPING BACKDROP DOT PATTERN -->
+  <div class="animated-dots-backdrop"></div>
+
+  <!-- 2. MESH GRID OVERLAY WITH OPACITY 45% -->
   <div class="mesh-grid-overlay"></div>
 
   <!-- NAVIGATION -->
@@ -807,12 +956,12 @@
 
   <!-- HERO -->
   <main>
-    <section class="hero">
+    <section class="hero" id="hero-section">
       <div class="badge-pill">
         <span class="pulse-dot"></span>
         <span data-i18n="hero_status">Available for Systems & AI Engineering</span>
       </div>
-      <h1 class="hero-title">Rifky Akhmad Fernanda</h1>
+      <h1 class="hero-title" id="parallax-title">Rifky Akhmad Fernanda</h1>
       <h2 class="hero-subtitle" data-i18n="hero_role">Systems Architecture • AI Platforms & MCP • High-Concurrency Backends</h2>
       <p class="hero-bio" data-i18n="hero_bio">
         Software Engineer with 4+ years of production experience architecting mission-critical retail POS infrastructures, healthcare platforms for the Ministry of Health RI, autonomous AI guardrails in Rust, and decentralized Web3 systems. Based in Bojonegoro, Indonesia.
@@ -849,6 +998,392 @@
         <div class="stat-label" data-i18n="stat_hki">Kemenkumham RI IP Rights</div>
       </div>
     </section>
+
+
+    <!-- ARCHITECTURE & TECHNOLOGY SPECTRUM (FOLDABLE DEFAULT OPENED) -->
+    <section class="spectrum-section">
+      <details open class="spectrum-accordion">
+        <summary class="spectrum-summary">
+          <div class="spectrum-summary-header">
+            <span class="spectrum-summary-icon">⚡</span>
+            <div>
+              <h3 class="spectrum-title" data-i18n="spectrum_title">Architecture & Technology Spectrum</h3>
+              <p class="spectrum-subtitle" data-i18n="spectrum_sub">50+ Verified Technologies, Frameworks & Concurrent Runtimes</p>
+            </div>
+          </div>
+          <span class="spectrum-chevron">▼</span>
+        </summary>
+        <div class="spectrum-content">
+
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="💻 Languages & Core Runtimes" data-id="💻 Bahasa & Core Runtimes">💻 Languages & Core Runtimes</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="TypeScript">
+              <img src="https://skillicons.dev/icons?i=ts&theme=dark" alt="TypeScript" title="TypeScript" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">TypeScript</span>
+            </div>
+
+            <div class="tech-item" title="JavaScript">
+              <img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" title="JavaScript" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">JavaScript</span>
+            </div>
+
+            <div class="tech-item" title="Rust">
+              <img src="https://skillicons.dev/icons?i=rust&theme=dark" alt="Rust" title="Rust" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Rust</span>
+            </div>
+
+            <div class="tech-item" title="Golang">
+              <img src="https://skillicons.dev/icons?i=go&theme=dark" alt="Golang" title="Golang" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Golang</span>
+            </div>
+
+            <div class="tech-item" title="Python">
+              <img src="https://skillicons.dev/icons?i=py&theme=dark" alt="Python" title="Python" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Python</span>
+            </div>
+
+            <div class="tech-item" title="Bun">
+              <img src="https://skillicons.dev/icons?i=bun&theme=dark" alt="Bun" title="Bun" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Bun</span>
+            </div>
+
+            <div class="tech-item" title="Node.js">
+              <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" title="Node.js" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Node.js</span>
+            </div>
+
+            <div class="tech-item" title="C++">
+              <img src="https://skillicons.dev/icons?i=cpp&theme=dark" alt="C++" title="C++" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">C++</span>
+            </div>
+
+            <div class="tech-item" title="C#">
+              <img src="https://skillicons.dev/icons?i=cs&theme=dark" alt="C#" title="C#" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">C#</span>
+            </div>
+
+            <div class="tech-item" title="C">
+              <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C" title="C" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">C</span>
+            </div>
+
+            <div class="tech-item" title="PHP">
+              <img src="https://skillicons.dev/icons?i=php&theme=dark" alt="PHP" title="PHP" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">PHP</span>
+            </div>
+
+            <div class="tech-item" title="Dart">
+              <img src="https://skillicons.dev/icons?i=dart&theme=dark" alt="Dart" title="Dart" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Dart</span>
+            </div>
+
+            <div class="tech-item" title="Kotlin">
+              <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin" title="Kotlin" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Kotlin</span>
+            </div>
+
+            <div class="tech-item" title="WebAssembly">
+              <img src="https://skillicons.dev/icons?i=wasm&theme=dark" alt="WebAssembly" title="WebAssembly" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">WebAssembly</span>
+            </div>
+
+            <div class="tech-item" title="Bash / Shell">
+              <img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash / Shell" title="Bash / Shell" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Bash / Shell</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="🌐 Frontend & Web Engines" data-id="🌐 Frontend & Mesin Web">🌐 Frontend & Web Engines</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="Next.js 15">
+              <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" alt="Next.js 15" title="Next.js 15" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Next.js 15</span>
+            </div>
+
+            <div class="tech-item" title="React 19">
+              <img src="https://skillicons.dev/icons?i=react&theme=dark" alt="React 19" title="React 19" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">React 19</span>
+            </div>
+
+            <div class="tech-item" title="SvelteKit">
+              <img src="https://skillicons.dev/icons?i=svelte&theme=dark" alt="SvelteKit" title="SvelteKit" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">SvelteKit</span>
+            </div>
+
+            <div class="tech-item" title="Vue.js">
+              <img src="https://skillicons.dev/icons?i=vue&theme=dark" alt="Vue.js" title="Vue.js" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Vue.js</span>
+            </div>
+
+            <div class="tech-item" title="Nuxt.js 4">
+              <img src="https://skillicons.dev/icons?i=nuxtjs&theme=dark" alt="Nuxt.js 4" title="Nuxt.js 4" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Nuxt.js 4</span>
+            </div>
+
+            <div class="tech-item" title="Astro 5">
+              <img src="https://skillicons.dev/icons?i=astro&theme=dark" alt="Astro 5" title="Astro 5" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Astro 5</span>
+            </div>
+
+            <div class="tech-item" title="Tailwind CSS v4">
+              <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" alt="Tailwind CSS v4" title="Tailwind CSS v4" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Tailwind CSS v4</span>
+            </div>
+
+            <div class="tech-item" title="Bootstrap">
+              <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" alt="Bootstrap" title="Bootstrap" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Bootstrap</span>
+            </div>
+
+            <div class="tech-item" title="Flutter">
+              <img src="https://skillicons.dev/icons?i=flutter&theme=dark" alt="Flutter" title="Flutter" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Flutter</span>
+            </div>
+
+            <div class="tech-item" title="Three.js">
+              <img src="https://skillicons.dev/icons?i=threejs&theme=dark" alt="Three.js" title="Three.js" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Three.js</span>
+            </div>
+
+            <div class="tech-item" title="Vite">
+              <img src="https://skillicons.dev/icons?i=vite&theme=dark" alt="Vite" title="Vite" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Vite</span>
+            </div>
+
+            <div class="tech-item" title="HTML5">
+              <img src="https://skillicons.dev/icons?i=html&theme=dark" alt="HTML5" title="HTML5" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">HTML5</span>
+            </div>
+
+            <div class="tech-item" title="CSS3">
+              <img src="https://skillicons.dev/icons?i=css&theme=dark" alt="CSS3" title="CSS3" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">CSS3</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="⚙️ Backend & API Architectures" data-id="⚙️ Backend & Arsitektur API">⚙️ Backend & API Architectures</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="NestJS 11">
+              <img src="https://skillicons.dev/icons?i=nestjs&theme=dark" alt="NestJS 11" title="NestJS 11" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">NestJS 11</span>
+            </div>
+
+            <div class="tech-item" title="Express.js">
+              <img src="https://skillicons.dev/icons?i=express&theme=dark" alt="Express.js" title="Express.js" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Express.js</span>
+            </div>
+
+            <div class="tech-item" title="ElysiaJS">
+              <img src="https://skillicons.dev/icons?i=elysia&theme=dark" alt="ElysiaJS" title="ElysiaJS" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">ElysiaJS</span>
+            </div>
+
+            <div class="tech-item" title="Actix Web">
+              <img src="https://skillicons.dev/icons?i=actix&theme=dark" alt="Actix Web" title="Actix Web" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Actix Web</span>
+            </div>
+
+            <div class="tech-item" title="Laravel 12">
+              <img src="https://skillicons.dev/icons?i=laravel&theme=dark" alt="Laravel 12" title="Laravel 12" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Laravel 12</span>
+            </div>
+
+            <div class="tech-item" title="FastAPI">
+              <img src="https://skillicons.dev/icons?i=fastapi&theme=dark" alt="FastAPI" title="FastAPI" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">FastAPI</span>
+            </div>
+
+            <div class="tech-item" title="Django">
+              <img src="https://skillicons.dev/icons?i=django&theme=dark" alt="Django" title="Django" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Django</span>
+            </div>
+
+            <div class="tech-item" title="GraphQL">
+              <img src="https://skillicons.dev/icons?i=graphql&theme=dark" alt="GraphQL" title="GraphQL" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">GraphQL</span>
+            </div>
+
+            <div class="tech-item" title="Swagger / OpenAPI">
+              <img src="https://skillicons.dev/icons?i=postman&theme=dark" alt="Swagger / OpenAPI" title="Swagger / OpenAPI" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Swagger / OpenAPI</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="🗄️ Databases & Streaming Infrastructure" data-id="🗄️ Basis Data & Infrastruktur Streaming">🗄️ Databases & Streaming Infrastructure</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="PostgreSQL">
+              <img src="https://skillicons.dev/icons?i=postgres&theme=dark" alt="PostgreSQL" title="PostgreSQL" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">PostgreSQL</span>
+            </div>
+
+            <div class="tech-item" title="MySQL / Oracle">
+              <img src="https://skillicons.dev/icons?i=mysql&theme=dark" alt="MySQL / Oracle" title="MySQL / Oracle" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">MySQL / Oracle</span>
+            </div>
+
+            <div class="tech-item" title="MongoDB">
+              <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" alt="MongoDB" title="MongoDB" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">MongoDB</span>
+            </div>
+
+            <div class="tech-item" title="Redis">
+              <img src="https://skillicons.dev/icons?i=redis&theme=dark" alt="Redis" title="Redis" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Redis</span>
+            </div>
+
+            <div class="tech-item" title="Apache Kafka">
+              <img src="https://skillicons.dev/icons?i=kafka&theme=dark" alt="Apache Kafka" title="Apache Kafka" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Apache Kafka</span>
+            </div>
+
+            <div class="tech-item" title="RabbitMQ">
+              <img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" alt="RabbitMQ" title="RabbitMQ" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">RabbitMQ</span>
+            </div>
+
+            <div class="tech-item" title="Prisma ORM">
+              <img src="https://skillicons.dev/icons?i=prisma&theme=dark" alt="Prisma ORM" title="Prisma ORM" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Prisma ORM</span>
+            </div>
+
+            <div class="tech-item" title="SQLite">
+              <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" alt="SQLite" title="SQLite" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">SQLite</span>
+            </div>
+
+            <div class="tech-item" title="Supabase">
+              <img src="https://skillicons.dev/icons?i=supabase&theme=dark" alt="Supabase" title="Supabase" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Supabase</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="🤖 AI, Agentic Systems & MCP" data-id="🤖 Sistem AI, Agen Otonom & MCP">🤖 AI, Agentic Systems & MCP</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="PyTorch">
+              <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" alt="PyTorch" title="PyTorch" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">PyTorch</span>
+            </div>
+
+            <div class="tech-item" title="TensorFlow">
+              <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" alt="TensorFlow" title="TensorFlow" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">TensorFlow</span>
+            </div>
+
+            <div class="tech-item" title="OpenCV">
+              <img src="https://skillicons.dev/icons?i=opencv&theme=dark" alt="OpenCV" title="OpenCV" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">OpenCV</span>
+            </div>
+
+            <div class="tech-item" title="Arduino IoT">
+              <img src="https://skillicons.dev/icons?i=arduino&theme=dark" alt="Arduino IoT" title="Arduino IoT" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Arduino IoT</span>
+            </div>
+
+            <div class="tech-item" title="Raspberry Pi">
+              <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" alt="Raspberry Pi" title="Raspberry Pi" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Raspberry Pi</span>
+            </div>
+
+            <div class="tech-item" title="ROS">
+              <img src="https://skillicons.dev/icons?i=ros&theme=dark" alt="ROS" title="ROS" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">ROS</span>
+            </div>
+          </div>
+        </div>
+        <div class="tech-group">
+          <h4 class="tech-group-title" data-en="☁️ Cloud, DevOps & Observability" data-id="☁️ Cloud, DevOps & Observabilitas">☁️ Cloud, DevOps & Observability</h4>
+          <div class="tech-icons-row">
+
+            <div class="tech-item" title="Docker">
+              <img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" title="Docker" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Docker</span>
+            </div>
+
+            <div class="tech-item" title="Kubernetes">
+              <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" title="Kubernetes" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Kubernetes</span>
+            </div>
+
+            <div class="tech-item" title="AWS S3 / Cloud">
+              <img src="https://skillicons.dev/icons?i=aws&theme=dark" alt="AWS S3 / Cloud" title="AWS S3 / Cloud" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">AWS S3 / Cloud</span>
+            </div>
+
+            <div class="tech-item" title="Google Cloud">
+              <img src="https://skillicons.dev/icons?i=gcp&theme=dark" alt="Google Cloud" title="Google Cloud" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Google Cloud</span>
+            </div>
+
+            <div class="tech-item" title="Terraform">
+              <img src="https://skillicons.dev/icons?i=terraform&theme=dark" alt="Terraform" title="Terraform" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Terraform</span>
+            </div>
+
+            <div class="tech-item" title="Nginx">
+              <img src="https://skillicons.dev/icons?i=nginx&theme=dark" alt="Nginx" title="Nginx" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Nginx</span>
+            </div>
+
+            <div class="tech-item" title="Cloudflare R2">
+              <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" alt="Cloudflare R2" title="Cloudflare R2" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Cloudflare R2</span>
+            </div>
+
+            <div class="tech-item" title="Cloudflare Workers">
+              <img src="https://skillicons.dev/icons?i=workers&theme=dark" alt="Cloudflare Workers" title="Cloudflare Workers" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Cloudflare Workers</span>
+            </div>
+
+            <div class="tech-item" title="Arch Linux">
+              <img src="https://skillicons.dev/icons?i=linux&theme=dark" alt="Arch Linux" title="Arch Linux" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Arch Linux</span>
+            </div>
+
+            <div class="tech-item" title="Firebase">
+              <img src="https://skillicons.dev/icons?i=firebase&theme=dark" alt="Firebase" title="Firebase" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Firebase</span>
+            </div>
+
+            <div class="tech-item" title="Sentry">
+              <img src="https://skillicons.dev/icons?i=sentry&theme=dark" alt="Sentry" title="Sentry" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Sentry</span>
+            </div>
+
+            <div class="tech-item" title="Prometheus">
+              <img src="https://skillicons.dev/icons?i=prometheus&theme=dark" alt="Prometheus" title="Prometheus" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Prometheus</span>
+            </div>
+
+            <div class="tech-item" title="Grafana">
+              <img src="https://skillicons.dev/icons?i=grafana&theme=dark" alt="Grafana" title="Grafana" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Grafana</span>
+            </div>
+
+            <div class="tech-item" title="GitHub Actions">
+              <img src="https://skillicons.dev/icons?i=githubactions&theme=dark" alt="GitHub Actions" title="GitHub Actions" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">GitHub Actions</span>
+            </div>
+
+            <div class="tech-item" title="Git">
+              <img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" title="Git" width="38" height="38" loading="lazy" />
+              <span class="tech-item-name">Git</span>
+            </div>
+          </div>
+        </div>
+        </div>
+      </details>
+    </section>
+
 
     <!-- CONTROLS & FILTER TABS -->
     <section class="controls-container">
@@ -1129,28 +1664,28 @@
         </div>
       </article>
 
-      <article class="repo-card" data-category="tools" data-name="rifkya911" data-featured="false">
+      <article class="repo-card" data-category="archive" data-name="my-portofolio-showcase" data-featured="false">
         <div class="card-header">
           <div class="card-title-group">
             <span class="repo-icon">📦</span>
             <h3 class="repo-title">
-              <a href="https://github.com/RifkyA911/RifkyA911" target="_blank" rel="noopener noreferrer">RifkyA911</a>
+              <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" target="_blank" rel="noopener noreferrer">My-Portofolio-ShowCase</a>
             </h3>
           </div>
           
         </div>
-        <p class="repo-desc">RifkyA911 GitHub profile</p>
+        <p class="repo-desc">Personal portfolio built with Next.js to showcase projects and skills</p>
         <div class="card-footer">
           <div class="repo-meta">
-            <span class="meta-tag meta-lang"><span class="lang-dot"></span>Software</span>
+            <span class="meta-tag meta-lang"><span class="lang-dot"></span>TypeScript</span>
             <span class="meta-tag meta-stars">⭐ 0</span>
             <span class="meta-tag meta-forks">🍴 0</span>
           </div>
           <div class="card-links">
-            <a href="https://github.com/RifkyA911/RifkyA911" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for RifkyA911">
+            <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for My-Portofolio-ShowCase">
               <span>Code</span> ↗
             </a>
-            <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
+            <a href="https://rifky-akhmad-portofolio.vercel.app/" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
           </div>
         </div>
       </article>
@@ -1174,6 +1709,32 @@
           </div>
           <div class="card-links">
             <a href="https://github.com/RifkyA911/RifkyA911.github.io" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for RifkyA911.github.io">
+              <span>Code</span> ↗
+            </a>
+            <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="repo-card" data-category="tools" data-name="rifkya911" data-featured="false">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="repo-icon">📦</span>
+            <h3 class="repo-title">
+              <a href="https://github.com/RifkyA911/RifkyA911" target="_blank" rel="noopener noreferrer">RifkyA911</a>
+            </h3>
+          </div>
+          
+        </div>
+        <p class="repo-desc">RifkyA911 GitHub profile</p>
+        <div class="card-footer">
+          <div class="repo-meta">
+            <span class="meta-tag meta-lang"><span class="lang-dot"></span>Software</span>
+            <span class="meta-tag meta-stars">⭐ 0</span>
+            <span class="meta-tag meta-forks">🍴 0</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/RifkyA911/RifkyA911" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for RifkyA911">
               <span>Code</span> ↗
             </a>
             <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
@@ -2013,32 +2574,6 @@
         </div>
       </article>
 
-      <article class="repo-card" data-category="web" data-name="my-portofolio-showcase" data-featured="false">
-        <div class="card-header">
-          <div class="card-title-group">
-            <span class="repo-icon">📦</span>
-            <h3 class="repo-title">
-              <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" target="_blank" rel="noopener noreferrer">My-Portofolio-ShowCase</a>
-            </h3>
-          </div>
-          
-        </div>
-        <p class="repo-desc">Personal portfolio built with Next.js to showcase projects and skills</p>
-        <div class="card-footer">
-          <div class="repo-meta">
-            <span class="meta-tag meta-lang"><span class="lang-dot"></span>TypeScript</span>
-            <span class="meta-tag meta-stars">⭐ 0</span>
-            <span class="meta-tag meta-forks">🍴 0</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for My-Portofolio-ShowCase">
-              <span>Code</span> ↗
-            </a>
-            <a href="https://rifky-akhmad-portofolio.vercel.app/" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
-          </div>
-        </div>
-      </article>
-
       <article class="repo-card" data-category="ai" data-name="basic-website-application--city-air-quality" data-featured="false">
         <div class="card-header">
           <div class="card-title-group">
@@ -2145,7 +2680,7 @@
     </section>
   </main>
 
-  <!-- STICKY BUTTON: INTERACTIVE TERMINAL CLI (ICON ONLY) -->
+  <!-- STICKY BUTTON: INTERACTIVE TERMINAL CLI (KOTAK ROUNDED) -->
   <button id="term-toggle-btn" class="term-toggle-btn" aria-label="Open Terminal CLI" title="Open Terminal CLI (Ctrl + `)">
     <span class="term-btn-icon">&gt;_</span>
   </button>
@@ -2200,6 +2735,8 @@
           stat_experience: "Production Experience",
           stat_scholar: "Scholar Publications",
           stat_hki: "Kemenkumham RI IP Rights",
+          spectrum_title: "Architecture & Technology Spectrum",
+          spectrum_sub: "50+ Verified Technologies, Frameworks & Concurrent Runtimes",
           tab_all: "All Repositories",
           tab_ai: "AI & Agentic Systems",
           tab_systems: "Systems & Concurrency",
@@ -2220,6 +2757,8 @@
           stat_experience: "Tahun Pengalaman",
           stat_scholar: "Publikasi Scholar",
           stat_hki: "Sertifikat Hak Cipta HKI",
+          spectrum_title: "Arsitektur & Spektrum Teknologi",
+          spectrum_sub: "50+ Rangkaian Teknologi, Framework & Runtime Konkuren Terverifikasi",
           tab_all: "Semua Repositori",
           tab_ai: "Sistem AI & Agen Otonom",
           tab_systems: "Sistem & Konkurensi",
@@ -2244,6 +2783,13 @@
           const key = el.getAttribute("data-i18n");
           if (dict[key]) el.textContent = dict[key];
         });
+
+        // Translate tech group titles
+        document.querySelectorAll(".tech-group-title").forEach(el => {
+          const val = el.getAttribute("data-" + lang);
+          if (val) el.textContent = val;
+        });
+
         const searchInput = document.getElementById("search-input");
         if (searchInput && dict.search_placeholder) {
           searchInput.placeholder = dict.search_placeholder;
@@ -2269,7 +2815,32 @@
       });
       applyTheme(currentTheme);
 
-      // 3. REPOSITORY SEARCH & FILTERING
+      // 3. PARALLAX "SUNDUL" & MOUSE TILT PHYSICS
+      const heroTitle = document.getElementById("parallax-title");
+      window.addEventListener("mousemove", (e) => {
+        const xPercent = (e.clientX / window.innerWidth) - 0.5;
+        const yPercent = (e.clientY / window.innerHeight) - 0.5;
+        if (heroTitle) {
+          heroTitle.style.transform = `translate(${xPercent * 14}px, ${yPercent * 8}px)`;
+        }
+      });
+
+      // Card 3D Tilt on Hover
+      document.querySelectorAll(".repo-card").forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = e.clientX - rect.left - (rect.width / 2);
+          const y = e.clientY - rect.top - (rect.height / 2);
+          const rotX = -(y / rect.height) * 12;
+          const rotY = (x / rect.width) * 12;
+          card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-8px) scale(1.025)`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "";
+        });
+      });
+
+      // 4. REPOSITORY SEARCH & FILTERING
       const searchInput = document.getElementById("search-input");
       const tabBtns = document.querySelectorAll(".tab-btn");
       const repoCards = document.querySelectorAll(".repo-card");
@@ -2305,7 +2876,7 @@
 
       searchInput.addEventListener("input", filterCards);
 
-      // 4. INTERACTIVE TERMINAL CLI & VPN/SSH SIMULATION
+      // 5. INTERACTIVE TERMINAL CLI & VPN/SSH SIMULATION
       const modal = document.getElementById("term-modal");
       const toggleBtn = document.getElementById("term-toggle-btn");
       const closeBtn = document.getElementById("term-close-btn");
