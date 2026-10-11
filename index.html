@@ -61,9 +61,9 @@
           "position": 1,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "mirunova-live",
-            "description": "Next-Gen Web Live2D & 3D Avatar Vision Tracker \u2022 100% Client-Side \u2022 Powered by Bun & SvelteKit",
-            "codeRepository": "https://github.com/RifkyA911/mirunova-live",
+            "name": "RifkyA911",
+            "description": "RifkyA911 GitHub profile",
+            "codeRepository": "https://github.com/RifkyA911/RifkyA911",
             "author": {
               "@type": "Person",
               "name": "Rifky Akhmad F",
@@ -76,9 +76,9 @@
           "position": 2,
           "item": {
             "@type": "SoftwareSourceCode",
-            "name": "RifkyA911",
-            "description": "RifkyA911 GitHub profile",
-            "codeRepository": "https://github.com/RifkyA911/RifkyA911",
+            "name": "mirunova-live",
+            "description": "Next-Gen Web Live2D & 3D Avatar Vision Tracker \u2022 100% Client-Side \u2022 Powered by Bun & SvelteKit",
+            "codeRepository": "https://github.com/RifkyA911/mirunova-live",
             "author": {
               "@type": "Person",
               "name": "Rifky Akhmad F",
@@ -926,6 +926,74 @@
       color: var(--text-muted);
     }
 
+    .tech-stack-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      padding: 1.5rem;
+      margin-bottom: 3.5rem;
+    }
+
+    .tech-stack-title {
+      font-size: 1.35rem;
+      color: var(--text-heading);
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      border-left: 4px solid var(--purple);
+      padding-left: 0.75rem;
+    }
+
+    .tech-category-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .tech-category {
+      background: rgba(13, 17, 23, 0.6);
+      border: 1px solid rgba(48, 54, 61, 0.6);
+      border-radius: 6px;
+      padding: 1rem;
+    }
+
+    .tech-category-label {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+      margin-bottom: 0.6rem;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .tech-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+    }
+
+    .tech-chip {
+      background: rgba(110, 118, 129, 0.15);
+      border: 1px solid rgba(48, 54, 61, 0.7);
+      color: var(--text-heading);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.55rem;
+      border-radius: 6px;
+      font-family: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+      transition: all 0.15s ease;
+    }
+
+    .tech-chip:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+      background: rgba(88, 166, 255, 0.12);
+      transform: translateY(-1px);
+    }
+
     footer {
       text-align: center;
       padding: 2.5rem 0;
@@ -945,6 +1013,9 @@
 
     @media (max-width: 640px) {
       .repo-grid {
+        grid-template-columns: 1fr;
+      }
+      .tech-category-grid {
         grid-template-columns: 1fr;
       }
       h1 {
@@ -978,17 +1049,129 @@
       </div>
 
       <div class="badge-bar">
-        <span class="badge">Arch Linux Daily</span>
+        <span class="badge">Systems Architecture</span>
         <span class="badge">Rust</span>
         <span class="badge">TypeScript</span>
         <span class="badge">Go</span>
+        <span class="badge">Bun & Elysia</span>
+        <span class="badge">Next.js & Svelte</span>
         <span class="badge">PHP / Laravel</span>
-        <span class="badge">Bun / Node</span>
-        <span class="badge">AI & Agents</span>
+        <span class="badge">AI & Multi-Agent</span>
       </div>
     </header>
 
     <main>
+      <section class="tech-stack-card">
+        <h2 class="tech-stack-title">⚡ Core Engineering & Technology Spectrum</h2>
+        <div class="tech-category-grid">
+          <div class="tech-category">
+            <div class="tech-category-label">💻 Languages & Core Runtimes</div>
+            <div class="tech-chips">
+              <span class="tech-chip">Rust</span>
+              <span class="tech-chip">TypeScript</span>
+              <span class="tech-chip">JavaScript</span>
+              <span class="tech-chip">Go</span>
+              <span class="tech-chip">Bun</span>
+              <span class="tech-chip">Node.js</span>
+              <span class="tech-chip">Python</span>
+              <span class="tech-chip">C++</span>
+              <span class="tech-chip">C# (.NET)</span>
+              <span class="tech-chip">PHP</span>
+              <span class="tech-chip">Dart</span>
+              <span class="tech-chip">Kotlin</span>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <div class="tech-category-label">🌐 Frontend & App Ecosystem</div>
+            <div class="tech-chips">
+              <span class="tech-chip">Next.js 16</span>
+              <span class="tech-chip">React 19</span>
+              <span class="tech-chip">SvelteKit 5</span>
+              <span class="tech-chip">Nuxt 4</span>
+              <span class="tech-chip">Vue 3</span>
+              <span class="tech-chip">Astro 5</span>
+              <span class="tech-chip">Tailwind CSS</span>
+              <span class="tech-chip">HeroUI</span>
+              <span class="tech-chip">shadcn/ui</span>
+              <span class="tech-chip">Flutter</span>
+              <span class="tech-chip">React Native</span>
+              <span class="tech-chip">GSAP</span>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <div class="tech-category-label">⚙️ Backend Services & APIs</div>
+            <div class="tech-chips">
+              <span class="tech-chip">Axum</span>
+              <span class="tech-chip">Tokio Async</span>
+              <span class="tech-chip">Actix Web</span>
+              <span class="tech-chip">ElysiaJS</span>
+              <span class="tech-chip">Hono.js</span>
+              <span class="tech-chip">NestJS</span>
+              <span class="tech-chip">Laravel 12</span>
+              <span class="tech-chip">CodeIgniter</span>
+              <span class="tech-chip">Gin</span>
+              <span class="tech-chip">REST APIs</span>
+              <span class="tech-chip">SSE</span>
+              <span class="tech-chip">WebSockets</span>
+              <span class="tech-chip">MCP</span>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <div class="tech-category-label">🗄️ Databases & Storage Engines</div>
+            <div class="tech-chips">
+              <span class="tech-chip">PostgreSQL</span>
+              <span class="tech-chip">MySQL</span>
+              <span class="tech-chip">Redis</span>
+              <span class="tech-chip">MongoDB</span>
+              <span class="tech-chip">ClickHouse</span>
+              <span class="tech-chip">Oracle DB</span>
+              <span class="tech-chip">Apache Kafka</span>
+              <span class="tech-chip">RabbitMQ</span>
+              <span class="tech-chip">Drizzle ORM</span>
+              <span class="tech-chip">Prisma</span>
+              <span class="tech-chip">SQLx</span>
+              <span class="tech-chip">SeaORM</span>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <div class="tech-category-label">🤖 AI, Machine Learning & Vision</div>
+            <div class="tech-chips">
+              <span class="tech-chip">Multi-Agent Swarms</span>
+              <span class="tech-chip">RAG Guardrails</span>
+              <span class="tech-chip">Groq LLaMA 3</span>
+              <span class="tech-chip">Google Gemini AI</span>
+              <span class="tech-chip">PyTorch</span>
+              <span class="tech-chip">TensorFlow</span>
+              <span class="tech-chip">MediaPipe Vision</span>
+              <span class="tech-chip">Live2D WebGL</span>
+              <span class="tech-chip">Three.js</span>
+              <span class="tech-chip">Real-ESRGAN</span>
+              <span class="tech-chip">Prompt Engineering</span>
+            </div>
+          </div>
+
+          <div class="tech-category">
+            <div class="tech-category-label">☁️ Cloud, DevOps & Monitoring</div>
+            <div class="tech-chips">
+              <span class="tech-chip">Docker</span>
+              <span class="tech-chip">AWS</span>
+              <span class="tech-chip">GCP</span>
+              <span class="tech-chip">Cloudflare</span>
+              <span class="tech-chip">Linux Environments</span>
+              <span class="tech-chip">Nginx</span>
+              <span class="tech-chip">Terraform</span>
+              <span class="tech-chip">Sentry</span>
+              <span class="tech-chip">OpenTelemetry</span>
+              <span class="tech-chip">Firebase</span>
+              <span class="tech-chip">CI/CD Pipelines</span>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <section class="category-section">
         <h2 class="category-title">AI &amp; Intelligent Systems (18)</h2>
