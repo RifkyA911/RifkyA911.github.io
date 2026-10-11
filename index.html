@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="tokyonight" data-lang="en">
+<html lang="en" data-theme="tokyonight" data-mode="dark" data-lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rifky Akhmad F. (RifkyA911) | Systems Architecture & Open Source Hub</title>
+  <title>Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer</title>
   
   <!-- Comprehensive SEO & Indexing -->
-  <meta name="description" content="Official portfolio & open-source systems directory of Rifky Akhmad Fernanda (@RifkyA911). Systems Architecture, AI security sentries, Model Context Protocol (MCP), low-latency backends in Rust & Go, and enterprise web engines.">
-  <meta name="keywords" content="Rifky Akhmad Fernanda, RifkyA911, Systems Architect, Software Engineer Indonesia, Rust Axum, Model Context Protocol, MCP Server, NovaSentry, TapVote-AI, Go Developer, Next.js 15, High Throughput, Bojonegoro, Open Source Hub, Full-Stack Developer">
+  <meta name="description" content="Official portfolio web of Rifky Akhmad Fernanda (@RifkyA911). Systems Architecture, AI security sentries, Model Context Protocol (MCP), low-latency backends in Rust & Go, and enterprise web platforms.">
+  <meta name="keywords" content="Rifky Akhmad Fernanda, RifkyA911, Systems Architect, Software Engineer Indonesia, Rust Axum, Model Context Protocol, MCP Server, NovaSentry, TapVote-AI, Go Developer, Next.js 15, High Throughput, Bojonegoro, Portfolio Web">
   <meta name="author" content="Rifky Akhmad Fernanda">
   <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
   <link rel="canonical" href="https://rifkya911.github.io/">
 
   <!-- Open Graph -->
   <meta property="og:type" content="profile">
-  <meta property="og:title" content="Rifky Akhmad F. (RifkyA911) | Systems Architecture & Open Source Hub">
-  <meta property="og:description" content="Explore 49+ production systems, AI security sentries, MCP servers, and concurrent engines built by Rifky Akhmad Fernanda.">
+  <meta property="og:title" content="Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer">
+  <meta property="og:description" content="Explore production systems, AI security sentries, MCP servers, and concurrent engines built by Rifky Akhmad Fernanda.">
   <meta property="og:url" content="https://rifkya911.github.io/">
   <meta property="og:site_name" content="RifkyA911 Hub">
   <meta property="og:locale" content="en_US">
   <meta property="og:locale:alternate" content="id_ID">
-  <meta property="og:image" content="https://rifkya911.github.io/CV_Rifky_Akhmad_Fernanda.pdf">
+  <meta property="og:image" content="https://avatars.githubusercontent.com/u/103986872?v=4">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Rifky Akhmad F. (RifkyA911) | Systems Architecture & Open Source Hub">
+  <meta name="twitter:title" content="Rifky Akhmad Fernanda | Systems Architect & Full-Stack Engineer">
   <meta name="twitter:description" content="Systems Architecture, AI Platforms, MCP, and Concurrent Backends in Rust & Go.">
   <meta name="twitter:creator" content="@RifkyA911">
 
@@ -104,113 +104,143 @@
   </script>
 
   <style>
-    /* THEME PRESETS */
+    /* CSS PALETTES & THEMES */
     :root {
-      --bg: #0d1117;
-      --card-bg: rgba(22, 27, 34, 0.88);
-      --card-border: #30363d;
+      --bg: #0b0f17;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --card-border: rgba(56, 139, 253, 0.2);
       --card-hover-border: #58a6ff;
-      --text: #c9d1d9;
-      --text-heading: #f0f6fc;
-      --text-muted: #8b949e;
-      --primary: #58a6ff;
-      --primary-hover: #79c0ff;
+      --grid-line: rgba(56, 139, 253, 0.08);
+      --text: #cbd5e1;
+      --text-heading: #f8fafc;
+      --text-muted: #8492a6;
+      --primary: #388bfd;
+      --primary-hover: #58a6ff;
+      --primary-glow: rgba(56, 139, 253, 0.35);
       --accent: #2ea44f;
-      --purple: #bc8cff;
       --tag-bg: rgba(56, 139, 253, 0.12);
       --tag-text: #79c0ff;
-      --terminal-bg: #0a0d12;
-      --mesh-color: rgba(56, 139, 253, 0.22);
+      --terminal-bg: #080c14;
+      --footer-solid: #06090e;
     }
 
     [data-theme="matrix"] {
-      --bg: #040c06;
-      --card-bg: rgba(6, 24, 10, 0.88);
-      --card-border: #13421d;
+      --bg: #030a05;
+      --card-bg: rgba(6, 24, 12, 0.85);
+      --card-border: rgba(0, 255, 102, 0.2);
       --card-hover-border: #00ff66;
-      --text: #a3e6b5;
-      --text-heading: #d4ffd6;
-      --text-muted: #4e8a5b;
+      --grid-line: rgba(0, 255, 102, 0.08);
+      --text: #a7f3d0;
+      --text-heading: #ecfdf5;
+      --text-muted: #528c67;
       --primary: #00ff66;
-      --primary-hover: #66ff99;
+      --primary-hover: #33ff85;
+      --primary-glow: rgba(0, 255, 102, 0.35);
       --accent: #00ff66;
-      --purple: #00e5ff;
       --tag-bg: rgba(0, 255, 102, 0.12);
       --tag-text: #00ff66;
       --terminal-bg: #020703;
-      --mesh-color: rgba(0, 255, 102, 0.22);
-    }
-
-    [data-theme="amoled"] {
-      --bg: #000000;
-      --card-bg: #0a0a0a;
-      --card-border: #222222;
-      --card-hover-border: #ffffff;
-      --text: #cccccc;
-      --text-heading: #ffffff;
-      --text-muted: #666666;
-      --primary: #ffffff;
-      --primary-hover: #e0e0e0;
-      --accent: #10b981;
-      --purple: #a855f7;
-      --tag-bg: rgba(255, 255, 255, 0.1);
-      --tag-text: #ffffff;
-      --terminal-bg: #050505;
-      --mesh-color: rgba(255, 255, 255, 0.18);
-    }
-
-    [data-theme="nord"] {
-      --bg: #2e3440;
-      --card-bg: rgba(59, 66, 82, 0.9);
-      --card-border: #4c566a;
-      --card-hover-border: #88c0d0;
-      --text: #d8dee9;
-      --text-heading: #eceff4;
-      --text-muted: #e5e9f0;
-      --primary: #88c0d0;
-      --primary-hover: #81a1c1;
-      --accent: #a3be8c;
-      --purple: #b48ead;
-      --tag-bg: rgba(136, 192, 208, 0.15);
-      --tag-text: #88c0d0;
-      --terminal-bg: #242933;
-      --mesh-color: rgba(136, 192, 208, 0.25);
+      --footer-solid: #020603;
     }
 
     [data-theme="cyberpunk"] {
-      --bg: #0e051b;
-      --card-bg: rgba(28, 12, 48, 0.88);
-      --card-border: #52227d;
+      --bg: #0c0414;
+      --card-bg: rgba(28, 12, 44, 0.85);
+      --card-border: rgba(255, 0, 127, 0.25);
       --card-hover-border: #ffe600;
-      --text: #f0e6ff;
+      --grid-line: rgba(255, 0, 127, 0.1);
+      --text: #f5d0fe;
       --text-heading: #ffffff;
-      --text-muted: #9f87ba;
+      --text-muted: #a855f7;
       --primary: #ffe600;
       --primary-hover: #fff066;
+      --primary-glow: rgba(255, 230, 0, 0.35);
       --accent: #ff007f;
-      --purple: #00f0ff;
       --tag-bg: rgba(255, 230, 0, 0.15);
       --tag-text: #ffe600;
-      --terminal-bg: #06010d;
-      --mesh-color: rgba(255, 0, 127, 0.25);
+      --terminal-bg: #07010a;
+      --footer-solid: #050108;
     }
 
-    [data-theme="light"] {
-      --bg: #f6f8fa;
+    [data-theme="nord"] {
+      --bg: #242933;
+      --card-bg: rgba(46, 52, 64, 0.9);
+      --card-border: rgba(136, 192, 208, 0.25);
+      --card-hover-border: #88c0d0;
+      --grid-line: rgba(136, 192, 208, 0.08);
+      --text: #d8dee9;
+      --text-heading: #eceff4;
+      --text-muted: #94a3b8;
+      --primary: #88c0d0;
+      --primary-hover: #81a1c1;
+      --primary-glow: rgba(136, 192, 208, 0.35);
+      --accent: #a3be8c;
+      --tag-bg: rgba(136, 192, 208, 0.15);
+      --tag-text: #88c0d0;
+      --terminal-bg: #1e222a;
+      --footer-solid: #171920;
+    }
+
+    [data-theme="rosepine"] {
+      --bg: #191724;
+      --card-bg: rgba(33, 32, 46, 0.88);
+      --card-border: rgba(235, 188, 186, 0.25);
+      --card-hover-border: #ebbcba;
+      --grid-line: rgba(235, 188, 186, 0.08);
+      --text: #e0def4;
+      --text-heading: #f6c177;
+      --text-muted: #908caa;
+      --primary: #ebbcba;
+      --primary-hover: #f6c177;
+      --primary-glow: rgba(235, 188, 186, 0.35);
+      --accent: #9ccfd8;
+      --tag-bg: rgba(235, 188, 186, 0.15);
+      --tag-text: #ebbcba;
+      --terminal-bg: #13111c;
+      --footer-solid: #0d0c14;
+    }
+
+    [data-theme="emerald"] {
+      --bg: #061814;
+      --card-bg: rgba(8, 38, 30, 0.85);
+      --card-border: rgba(52, 211, 153, 0.25);
+      --card-hover-border: #34d399;
+      --grid-line: rgba(52, 211, 153, 0.08);
+      --text: #d1fae5;
+      --text-heading: #f0fdf4;
+      --text-muted: #6ee7b7;
+      --primary: #34d399;
+      --primary-hover: #6ee7b7;
+      --primary-glow: rgba(52, 211, 153, 0.35);
+      --accent: #10b981;
+      --tag-bg: rgba(52, 211, 153, 0.15);
+      --tag-text: #34d399;
+      --terminal-bg: #04100d;
+      --footer-solid: #020b09;
+    }
+
+    /* LIGHT MODE OVERRIDE */
+    [data-mode="light"] {
+      --bg: #f8fafc;
       --card-bg: #ffffff;
-      --card-border: #d0d7de;
-      --card-hover-border: #0969da;
-      --text: #24292f;
-      --text-heading: #0969da;
-      --text-muted: #57606a;
-      --primary: #0969da;
-      --primary-hover: #218bff;
-      --accent: #1a7f37;
-      --purple: #8250df;
-      --tag-bg: rgba(9, 105, 218, 0.1);
-      --tag-text: #0969da;
-      --terminal-bg: #1c2128;
-      --mesh-color: rgba(9, 105, 218, 0.18);
+      --card-border: #e2e8f0;
+      --card-hover-border: var(--primary);
+      --grid-line: rgba(15, 23, 42, 0.06);
+      --text: #334155;
+      --text-heading: #0f172a;
+      --text-muted: #64748b;
+      --primary: #0284c7;
+      --primary-hover: #0369a1;
+      --primary-glow: rgba(2, 132, 199, 0.25);
+      --accent: #16a34a;
+      --tag-bg: rgba(2, 132, 199, 0.08);
+      --tag-text: #0284c7;
+      --terminal-bg: #0f172a;
+      --footer-solid: #0f172a;
+    }
+    [data-mode="light"] [data-theme="matrix"] {
+      --primary: #059669;
+      --tag-text: #059669;
     }
 
     * {
@@ -220,7 +250,7 @@
     }
 
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans", Helvetica, Arial, sans-serif;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background-color: var(--bg);
       color: var(--text);
       line-height: 1.6;
@@ -230,28 +260,7 @@
       transition: background-color 0.3s ease, color 0.3s ease;
     }
 
-    /* 1. ANIMATED LOOPING BACKDROP DOT PATTERN */
-    @keyframes dotDrift {
-      0% { background-position: 0 0, 0 0; }
-      100% { background-position: 32px 32px, -32px 32px; }
-    }
-    .animated-dots-backdrop {
-      position: fixed;
-      top: 0;
-      left: 0;
-      width: 100vw;
-      height: 100vh;
-      pointer-events: none;
-      z-index: 0;
-      opacity: 0.45;
-      background-image:
-        radial-gradient(var(--mesh-color) 1.5px, transparent 1.5px),
-        radial-gradient(rgba(255, 255, 255, 0.08) 1.2px, transparent 1.2px);
-      background-size: 32px 32px, 64px 64px;
-      animation: dotDrift 28s linear infinite;
-    }
-
-    /* 2. KOTAK-KOTAK MESH OVERLAY OPACITY 45% */
+    /* CLEAN KOTAK-KOTAK MESH (NO DOTS IN CELLS) */
     .mesh-grid-overlay {
       position: fixed;
       top: 0;
@@ -262,23 +271,36 @@
       z-index: 0;
       opacity: 0.45;
       background-image:
-        linear-gradient(to right, var(--mesh-color) 1px, transparent 1px),
-        linear-gradient(to bottom, var(--mesh-color) 1px, transparent 1px),
-        radial-gradient(circle at 50% 15%, var(--primary) 0%, transparent 60%);
-      background-size: 32px 32px, 32px 32px, 100% 100%;
+        linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+        linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+      background-size: 36px 36px;
     }
 
-    /* HEADER & NAVIGATION */
+    /* AMBIENT GLOW BACKDROP */
+    .ambient-glow {
+      position: fixed;
+      top: -150px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 750px;
+      height: 450px;
+      background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.55;
+    }
+
+    /* NAVBAR REDESIGN */
     header {
       position: sticky;
       top: 0;
       z-index: 100;
-      background: rgba(13, 17, 23, 0.85);
-      backdrop-filter: blur(12px);
+      background: rgba(11, 15, 23, 0.85);
+      backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--card-border);
-      transition: all 0.3s ease;
+      transition: background 0.3s ease;
     }
-    [data-theme="light"] header {
+    [data-mode="light"] header {
       background: rgba(255, 255, 255, 0.85);
     }
     .nav-container {
@@ -293,21 +315,31 @@
     .brand {
       display: flex;
       align-items: center;
-      gap: 0.75rem;
+      gap: 0.6rem;
       text-decoration: none;
       color: var(--text-heading);
       font-weight: 700;
       font-size: 1.15rem;
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+      letter-spacing: -0.02em;
     }
-    .brand:hover {
-      transform: translateY(-2px) scale(1.04);
+    .brand-code {
+      font-family: monospace;
+      color: var(--primary);
     }
-    .brand-avatar {
-      width: 34px;
-      height: 34px;
-      border-radius: 50%;
-      border: 1.5px solid var(--primary);
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-link:hover {
+      color: var(--primary);
     }
     .nav-actions {
       display: flex;
@@ -321,26 +353,22 @@
       padding: 0.45rem 0.85rem;
       font-size: 0.85rem;
       font-weight: 600;
-      border-radius: 6px;
+      border-radius: 8px;
       text-decoration: none;
       cursor: pointer;
       border: 1px solid var(--card-border);
       background: var(--card-bg);
       color: var(--text);
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s, color 0.2s, transform 0.2s;
     }
     .nav-btn:hover {
       border-color: var(--primary);
       color: var(--primary);
-      transform: translateY(-3px) scale(1.04);
-      box-shadow: 0 4px 14px rgba(88, 166, 255, 0.2);
-    }
-    .nav-btn:active {
-      transform: translateY(1px) scale(0.97);
+      transform: translateY(-1px);
     }
     .nav-btn.primary {
       background: var(--primary);
-      color: #0d1117;
+      color: #0b0f17;
       border-color: var(--primary);
     }
     [data-theme="matrix"] .nav-btn.primary,
@@ -349,38 +377,143 @@
     }
     .nav-btn.primary:hover {
       background: var(--primary-hover);
-      box-shadow: 0 0 16px var(--primary);
+      box-shadow: 0 0 16px var(--primary-glow);
     }
 
-    /* HERO SECTION */
+    /* THEME PALETTE DROPDOWN / MODAL */
+    .palette-dropdown {
+      display: none;
+      position: absolute;
+      top: 100%;
+      right: 1.5rem;
+      margin-top: 0.5rem;
+      background: var(--card-bg);
+      border: 1.5px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1rem;
+      width: 280px;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, 0.6);
+      backdrop-filter: blur(16px);
+      z-index: 200;
+    }
+    .palette-dropdown.show {
+      display: block;
+    }
+    .palette-header {
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--text-heading);
+      margin-bottom: 0.65rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .palette-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.85rem;
+    }
+    .palette-choice {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 1px solid var(--card-border);
+      background: rgba(255, 255, 255, 0.04);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+      cursor: pointer;
+      font-size: 0.75rem;
+      font-weight: 600;
+      color: var(--text);
+      transition: all 0.2s;
+    }
+    .palette-choice:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+    }
+    .palette-choice.active {
+      border-color: var(--primary);
+      background: var(--tag-bg);
+      color: var(--primary);
+    }
+    .swatch {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+    }
+    .mode-toggle-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-top: 0.65rem;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+    .mode-toggle-btn {
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      border: 1px solid var(--card-border);
+      background: var(--card-bg);
+      color: var(--text);
+      cursor: pointer;
+      font-size: 0.8rem;
+    }
+
+    /* HERO SECTION WITH CENTERED PROFILE PHOTO */
     .hero {
       position: relative;
       z-index: 1;
       max-width: 1240px;
       margin: 0 auto;
-      padding: 3.5rem 1.5rem 2rem 1.5rem;
+      padding: 3.5rem 1.5rem 2.5rem 1.5rem;
       text-align: center;
     }
-    .badge-pill {
+    .hero-avatar-wrapper {
+      position: relative;
+      display: inline-block;
+      margin-bottom: 1.5rem;
+    }
+    .avatar-ring {
+      width: 124px;
+      height: 124px;
+      border-radius: 50%;
+      padding: 4px;
+      background: linear-gradient(135deg, var(--primary), var(--accent));
+      box-shadow: 0 0 30px var(--primary-glow);
+      display: inline-block;
+      transition: transform 0.3s ease;
+    }
+    .avatar-ring:hover {
+      transform: scale(1.05);
+    }
+    .hero-avatar-img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      display: block;
+      background: var(--bg);
+    }
+    .status-badge {
       display: inline-flex;
       align-items: center;
-      gap: 0.5rem;
-      padding: 0.35rem 0.95rem;
+      gap: 0.45rem;
+      padding: 0.35rem 0.85rem;
       border-radius: 9999px;
-      background: var(--tag-bg);
-      color: var(--tag-text);
-      font-size: 0.82rem;
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      color: var(--accent);
+      font-size: 0.8rem;
       font-weight: 600;
-      margin-bottom: 1.25rem;
-      border: 1px solid var(--primary);
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+      margin-top: 0.75rem;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     }
-    .badge-pill:hover {
-      transform: translateY(-4px) scale(1.06);
-    }
-    .pulse-dot {
-      width: 8px;
-      height: 8px;
+    .status-dot {
+      width: 7px;
+      height: 7px;
       border-radius: 50%;
       background: var(--accent);
       box-shadow: 0 0 8px var(--accent);
@@ -390,8 +523,7 @@
       font-weight: 800;
       color: var(--text-heading);
       letter-spacing: -0.03em;
-      margin-bottom: 0.8rem;
-      transition: transform 0.2s ease-out;
+      margin-bottom: 0.5rem;
     }
     .hero-subtitle {
       font-size: 1.25rem;
@@ -400,7 +532,7 @@
       margin-bottom: 1.2rem;
     }
     .hero-bio {
-      max-width: 780px;
+      max-width: 760px;
       margin: 0 auto 1.8rem auto;
       color: var(--text-muted);
       font-size: 1.05rem;
@@ -428,15 +560,14 @@
     .stat-card {
       background: var(--card-bg);
       border: 1px solid var(--card-border);
-      border-radius: 8px;
+      border-radius: 10px;
       padding: 1.1rem;
       text-align: center;
-      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.25s;
+      transition: transform 0.25s ease, border-color 0.25s ease;
     }
     .stat-card:hover {
       border-color: var(--primary);
-      transform: translateY(-6px) scale(1.03);
-      box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+      transform: translateY(-3px);
     }
     .stat-num {
       font-size: 1.75rem;
@@ -462,7 +593,7 @@
     }
     .spectrum-accordion {
       background: var(--card-bg);
-      border: 1.5px solid var(--card-border);
+      border: 1px solid var(--card-border);
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35);
@@ -493,7 +624,7 @@
       gap: 0.85rem;
     }
     .spectrum-summary-icon {
-      font-size: 1.6rem;
+      font-size: 1.5rem;
     }
     .spectrum-title {
       font-size: 1.15rem;
@@ -505,7 +636,7 @@
       color: var(--text-muted);
     }
     .spectrum-chevron {
-      font-size: 0.9rem;
+      font-size: 0.85rem;
       color: var(--primary);
       transition: transform 0.3s ease;
     }
@@ -529,7 +660,7 @@
     .tech-icons-row {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.65rem;
+      gap: 0.55rem;
     }
     .tech-item {
       display: inline-flex;
@@ -540,12 +671,11 @@
       background: rgba(255, 255, 255, 0.03);
       border: 1px solid var(--card-border);
       cursor: pointer;
-      transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.2s, box-shadow 0.2s;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
     }
     .tech-item:hover {
       border-color: var(--primary);
-      transform: translateY(-5px) scale(1.08);
-      box-shadow: 0 6px 18px rgba(88, 166, 255, 0.25);
+      transform: translateY(-3px);
       background: var(--tag-bg);
     }
     .tech-item-name {
@@ -578,11 +708,11 @@
       border-radius: 8px;
       color: var(--text-heading);
       outline: none;
-      transition: border-color 0.2s, box-shadow 0.2s;
+      transition: border-color 0.2s;
     }
     .search-input:focus {
       border-color: var(--primary);
-      box-shadow: 0 0 12px rgba(88, 166, 255, 0.25);
+      box-shadow: 0 0 12px var(--primary-glow);
     }
     .search-icon {
       position: absolute;
@@ -609,25 +739,23 @@
       font-weight: 600;
       cursor: pointer;
       white-space: nowrap;
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), all 0.2s;
+      transition: all 0.2s ease;
     }
     .tab-btn:hover {
       color: var(--text-heading);
       border-color: var(--primary);
-      transform: translateY(-2px);
     }
     .tab-btn.active {
       background: var(--primary);
-      color: #0d1117;
+      color: #0b0f17;
       border-color: var(--primary);
-      transform: translateY(-2px);
     }
     [data-theme="matrix"] .tab-btn.active,
     [data-theme="cyberpunk"] .tab-btn.active {
       color: #000000;
     }
 
-    /* PROJECT REPOSITORY GRID & PARALLAX SUNDUL */
+    /* PROJECT REPOSITORY GRID — CALM & PROFESSIONAL HOVER */
     .grid-container {
       position: relative;
       z-index: 1;
@@ -637,7 +765,6 @@
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
       gap: 1.25rem;
-      perspective: 1200px;
     }
     .repo-card {
       background: var(--card-bg);
@@ -647,14 +774,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transform-style: preserve-3d;
-      transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.3s;
+      transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.25s ease, box-shadow 0.25s ease;
     }
-    /* "SUNDUL" BOUNCE ON HOVER */
     .repo-card:hover {
       border-color: var(--card-hover-border);
-      transform: translateY(-8px) scale(1.025);
-      box-shadow: 0 14px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(88, 166, 255, 0.2);
+      transform: translateY(-4px); /* CALM & PROFESSIONAL */
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 16px var(--primary-glow);
     }
     .card-header {
       display: flex;
@@ -738,12 +863,12 @@
       color: var(--tag-text);
       text-decoration: none;
       border: 1px solid var(--primary);
-      transition: transform 0.25s cubic-bezier(0.34, 1.56, 0.64, 1), all 0.2s;
+      transition: background 0.2s, color 0.2s, transform 0.2s;
     }
     .card-link-btn:hover {
       background: var(--primary);
-      color: #0d1117;
-      transform: translateY(-2px) scale(1.05);
+      color: #0b0f17;
+      transform: translateY(-1px);
     }
     [data-theme="matrix"] .card-link-btn:hover,
     [data-theme="cyberpunk"] .card-link-btn:hover {
@@ -760,28 +885,28 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background: rgba(22, 27, 34, 0.95);
+      background: rgba(18, 24, 38, 0.95);
       border: 1.5px solid var(--primary);
-      border-radius: 12px; /* KOTAK ROUNDED */
+      border-radius: 12px;
       color: var(--primary);
       font-family: "Fira Code", SFMono-Regular, Consolas, Menlo, monospace;
       font-size: 1.15rem;
       font-weight: 700;
       cursor: pointer;
-      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 18px rgba(88, 166, 255, 0.35);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6), 0 0 16px var(--primary-glow);
       backdrop-filter: blur(12px);
       z-index: 9999;
-      transition: transform 0.35s cubic-bezier(0.34, 1.56, 0.64, 1), border-color 0.25s, box-shadow 0.25s;
+      transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
       user-select: none;
     }
     .term-toggle-btn:hover {
       border-color: var(--primary-hover);
       color: #ffffff;
-      transform: translateY(-4px) scale(1.12); /* SUNDUL BOUNCE */
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 25px var(--primary);
+      transform: translateY(-3px) scale(1.08);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.75), 0 0 24px var(--primary);
     }
     .term-toggle-btn:active {
-      transform: translateY(2px) scale(0.95);
+      transform: translateY(1px);
     }
 
     /* INTERACTIVE TERMINAL MODAL */
@@ -792,7 +917,7 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(0, 0, 0, 0.75);
+      background: rgba(0, 0, 0, 0.8);
       backdrop-filter: blur(8px);
       z-index: 10000;
       align-items: center;
@@ -804,19 +929,19 @@
     }
     .term-window {
       width: 100%;
-      max-width: 940px;
-      height: 580px;
+      max-width: 960px;
+      height: 600px;
       background: var(--terminal-bg);
       border: 1.5px solid var(--primary);
       border-radius: 12px;
       display: flex;
       flex-direction: column;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px rgba(88, 166, 255, 0.25);
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.85), 0 0 35px var(--primary-glow);
       overflow: hidden;
       font-family: "Fira Code", SFMono-Regular, Consolas, Menlo, monospace;
     }
     .term-header {
-      background: #161b22;
+      background: #121824;
       border-bottom: 1px solid var(--card-border);
       padding: 0.65rem 1rem;
       display: flex;
@@ -848,10 +973,10 @@
 
     .term-body {
       flex: 1;
-      padding: 1rem;
+      padding: 1.1rem;
       overflow-y: auto;
-      color: #c9d1d9;
-      font-size: 0.88rem;
+      color: #cbd5e1;
+      font-size: 0.86rem;
       line-height: 1.5;
     }
     .term-line {
@@ -878,36 +1003,164 @@
       background: transparent;
       border: none;
       outline: none;
-      color: #f0f6fc;
+      color: #f8fafc;
       font-family: inherit;
-      font-size: 0.88rem;
+      font-size: 0.86rem;
       margin-left: 0.5rem;
     }
 
     /* TERMINAL COLOR CLASSES */
-    .c-user { color: #7ee787; font-weight: 700; }
-    .c-path { color: #58a6ff; font-weight: 600; }
-    .c-sym { color: #d2a8ff; font-weight: 700; }
-    .c-error { color: #ff7b72; }
-    .c-warn { color: #d29922; }
-    .c-accent { color: #58a6ff; }
-    .c-gold { color: #e3b341; font-weight: 700; }
-    .c-purple { color: #bc8cff; }
-    .c-cmd { color: #79c0ff; font-weight: 600; }
-    .c-dim { color: #8b949e; }
-    .term-link { color: #58a6ff; text-decoration: underline; }
+    .c-user { color: #4ade80; font-weight: 700; }
+    .c-path { color: #38bdf8; font-weight: 600; }
+    .c-sym { color: #c084fc; font-weight: 700; }
+    .c-error { color: #f87171; }
+    .c-warn { color: #fbbf24; }
+    .c-accent { color: #38bdf8; }
+    .c-gold { color: #fbbf24; font-weight: 700; }
+    .c-purple { color: #c084fc; }
+    .c-cmd { color: #7dd3fc; font-weight: 600; }
+    .c-dim { color: #64748b; }
+    .term-link { color: #38bdf8; text-decoration: underline; }
 
-    /* FOOTER */
-    footer {
+    /* CONTACT DETAIL MODAL */
+    .contact-modal {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background: rgba(0, 0, 0, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 10001;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+    .contact-modal.open {
+      display: flex;
+    }
+    .contact-card {
+      width: 100%;
+      max-width: 520px;
+      background: var(--card-bg);
+      border: 1.5px solid var(--primary);
+      border-radius: 14px;
+      padding: 2rem;
+      box-shadow: 0 25px 50px rgba(0, 0, 0, 0.7);
       position: relative;
-      z-index: 1;
+    }
+    .contact-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+    }
+    .contact-title {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--text-heading);
+    }
+    .contact-close {
+      background: none;
+      border: none;
+      color: var(--text-muted);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+    .contact-items {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .contact-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 1rem;
+      border-radius: 8px;
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid var(--card-border);
+    }
+    .contact-row-info {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      color: var(--text);
+      font-size: 0.92rem;
+    }
+    .copy-btn {
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      font-size: 0.78rem;
+      border: 1px solid var(--card-border);
+      background: var(--tag-bg);
+      color: var(--tag-text);
+      cursor: pointer;
+    }
+    .copy-btn:hover {
+      background: var(--primary);
+      color: #000;
+    }
+
+    /* FOOTER WITH ANIMATED FLUID OCEAN WAVES */
+    .ocean-wrapper {
+      position: relative;
+      width: 100%;
+      margin-top: 4rem;
+      overflow: hidden;
+    }
+    .ocean-waves {
+      position: relative;
+      width: 100%;
+      height: 70px;
+      margin-bottom: -7px;
+      min-height: 50px;
+      max-height: 90px;
+    }
+    .waves {
+      position: relative;
+      width: 100%;
+      height: 70px;
+    }
+    .parallax-waves > use {
+      animation: move-wave 25s cubic-bezier(.55,.5,.45,.5) infinite;
+    }
+    .parallax-waves > use:nth-child(1) {
+      animation-delay: -2s;
+      animation-duration: 7s;
+    }
+    .parallax-waves > use:nth-child(2) {
+      animation-delay: -3s;
+      animation-duration: 10s;
+    }
+    .parallax-waves > use:nth-child(3) {
+      animation-delay: -4s;
+      animation-duration: 13s;
+    }
+    .parallax-waves > use:nth-child(4) {
+      animation-delay: -5s;
+      animation-duration: 20s;
+    }
+    @keyframes move-wave {
+      0% {
+        transform: translate3d(-90px,0,0);
+      }
+      100% { 
+        transform: translate3d(85px,0,0);
+      }
+    }
+    .solid-footer {
+      background: var(--footer-solid);
       border-top: 1px solid var(--card-border);
       padding: 2.5rem 1.5rem;
       text-align: center;
       color: var(--text-muted);
       font-size: 0.88rem;
+      position: relative;
+      z-index: 2;
     }
-    footer a {
+    .solid-footer a {
       color: var(--primary);
       text-decoration: none;
     }
@@ -916,60 +1169,112 @@
       .hero-title { font-size: 2.1rem; }
       .grid-container { grid-template-columns: 1fr; }
       .term-window { height: 85vh; }
-      .nav-actions { gap: 0.4rem; }
+      .nav-links { display: none; }
       .nav-btn { padding: 0.35rem 0.65rem; font-size: 0.78rem; }
     }
   </style>
 </head>
 <body>
-  <!-- 1. ANIMATED LOOPING BACKDROP DOT PATTERN -->
-  <div class="animated-dots-backdrop"></div>
-
-  <!-- 2. MESH GRID OVERLAY WITH OPACITY 45% -->
+  <!-- CLEAN KOTAK-KOTAK MESH OVERLAY -->
   <div class="mesh-grid-overlay"></div>
+  <div class="ambient-glow"></div>
 
   <!-- NAVIGATION -->
   <header>
     <div class="nav-container">
       <a href="https://rifkya911.github.io" class="brand">
-        <img src="https://avatars.githubusercontent.com/u/103986872?v=4" alt="RifkyA911" class="brand-avatar" />
+        <span class="brand-code">&lt;/&gt;</span>
         <span>RifkyA911</span>
       </a>
+
+      <nav class="nav-links">
+        <a href="#spectrum" class="nav-link" data-i18n="nav_spectrum">Tech Spectrum</a>
+        <a href="#repo-grid" class="nav-link" data-i18n="nav_systems">Systems & Repos</a>
+        <a href="javascript:void(0)" id="term-nav-link" class="nav-link">CLI Terminal</a>
+      </nav>
+
       <div class="nav-actions">
         <!-- LANG SWITCHER -->
         <button id="lang-toggle-btn" class="nav-btn" aria-label="Toggle Language">
           <span id="lang-flag">🇮🇩</span> <span id="lang-label">ID</span>
         </button>
 
-        <!-- THEME SWITCHER -->
-        <button id="theme-toggle-btn" class="nav-btn" aria-label="Toggle Visual Theme">
-          🎨 <span id="theme-label" data-i18n="theme_btn">Theme</span>
+        <!-- THEME PALETTE PICKER -->
+        <button id="theme-btn" class="nav-btn" aria-label="Theme Palette">
+          🎨 <span data-i18n="theme_btn">Theme</span>
         </button>
 
-        <!-- CV DOWNLOAD BUTTON -->
-        <a href="./CV_Rifky_Akhmad_Fernanda.pdf" target="_blank" rel="noopener noreferrer" class="nav-btn primary" data-i18n="cv_nav">
-          📄 CV
-        </a>
+        <!-- CONTACT BUTTON (MODAL TRIGGER) -->
+        <button id="contact-nav-btn" class="nav-btn primary" data-i18n="nav_contact">
+          💬 Contact
+        </button>
+      </div>
+
+      <!-- THEME PALETTE DROPDOWN -->
+      <div id="palette-dropdown" class="palette-dropdown">
+        <div class="palette-header">
+          <span data-i18n="palette_heading">Color Palette</span>
+          <span style="font-size: 0.75rem; color: var(--text-muted);">6 Presets</span>
+        </div>
+        <div class="palette-grid">
+          <div class="palette-choice active" data-theme="tokyonight">
+            <span class="swatch" style="background: #388bfd;"></span>
+            <span>Tokyo</span>
+          </div>
+          <div class="palette-choice" data-theme="matrix">
+            <span class="swatch" style="background: #00ff66;"></span>
+            <span>Matrix</span>
+          </div>
+          <div class="palette-choice" data-theme="cyberpunk">
+            <span class="swatch" style="background: #ffe600;"></span>
+            <span>Cyber</span>
+          </div>
+          <div class="palette-choice" data-theme="nord">
+            <span class="swatch" style="background: #88c0d0;"></span>
+            <span>Nord</span>
+          </div>
+          <div class="palette-choice" data-theme="rosepine">
+            <span class="swatch" style="background: #ebbcba;"></span>
+            <span>Rosé</span>
+          </div>
+          <div class="palette-choice" data-theme="emerald">
+            <span class="swatch" style="background: #34d399;"></span>
+            <span>Emerald</span>
+          </div>
+        </div>
+        <div class="mode-toggle-row">
+          <span data-i18n="mode_label">Appearance Mode</span>
+          <button id="mode-toggle-btn" class="mode-toggle-btn">🌙 Dark</button>
+        </div>
       </div>
     </div>
   </header>
 
-  <!-- HERO -->
+  <!-- HERO SECTION WITH CENTERED PROFILE PHOTO -->
   <main>
-    <section class="hero" id="hero-section">
-      <div class="badge-pill">
-        <span class="pulse-dot"></span>
-        <span data-i18n="hero_status">Available for Systems & AI Engineering</span>
+    <section class="hero">
+      <div class="hero-avatar-wrapper">
+        <div class="avatar-ring">
+          <img src="https://avatars.githubusercontent.com/u/103986872?v=4" alt="Rifky Akhmad Fernanda" class="hero-avatar-img" />
+        </div>
+        <div>
+          <span class="status-badge">
+            <span class="status-dot"></span>
+            <span data-i18n="hero_status">Open for Systems & AI Roles</span>
+          </span>
+        </div>
       </div>
-      <h1 class="hero-title" id="parallax-title">Rifky Akhmad Fernanda</h1>
-      <h2 class="hero-subtitle" data-i18n="hero_role">Systems Architecture • AI Platforms & MCP • High-Concurrency Backends</h2>
+
+      <h1 class="hero-title">Rifky Akhmad Fernanda</h1>
+      <h2 class="hero-subtitle" data-i18n="hero_role">Systems Architecture • AI Platforms & MCP • Concurrent Backends</h2>
       <p class="hero-bio" data-i18n="hero_bio">
         Software Engineer with 4+ years of production experience architecting mission-critical retail POS infrastructures, healthcare platforms for the Ministry of Health RI, autonomous AI guardrails in Rust, and decentralized Web3 systems. Based in Bojonegoro, Indonesia.
       </p>
+
       <div class="hero-ctas">
-        <a href="./CV_Rifky_Akhmad_Fernanda.pdf" target="_blank" rel="noopener noreferrer" class="nav-btn primary" style="font-size: 1rem; padding: 0.65rem 1.4rem;">
-          📄 <span data-i18n="download_cv">Download Full CV (PDF)</span>
-        </a>
+        <button id="hero-contact-btn" class="nav-btn primary" style="font-size: 1rem; padding: 0.65rem 1.4rem;">
+          💬 <span data-i18n="get_in_touch">Get In Touch</span>
+        </button>
         <a href="https://github.com/RifkyA911" target="_blank" rel="noopener noreferrer" class="nav-btn" style="font-size: 1rem; padding: 0.65rem 1.4rem;">
           🐙 GitHub (@RifkyA911)
         </a>
@@ -1001,7 +1306,7 @@
 
 
     <!-- ARCHITECTURE & TECHNOLOGY SPECTRUM (FOLDABLE DEFAULT OPENED) -->
-    <section class="spectrum-section">
+    <section class="spectrum-section" id="spectrum">
       <details open class="spectrum-accordion">
         <summary class="spectrum-summary">
           <div class="spectrum-summary-header">
@@ -1020,77 +1325,77 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="TypeScript">
-              <img src="https://skillicons.dev/icons?i=ts&theme=dark" alt="TypeScript" title="TypeScript" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=ts&theme=dark" alt="TypeScript" title="TypeScript" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">TypeScript</span>
             </div>
 
             <div class="tech-item" title="JavaScript">
-              <img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" title="JavaScript" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=js&theme=dark" alt="JavaScript" title="JavaScript" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">JavaScript</span>
             </div>
 
             <div class="tech-item" title="Rust">
-              <img src="https://skillicons.dev/icons?i=rust&theme=dark" alt="Rust" title="Rust" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=rust&theme=dark" alt="Rust" title="Rust" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Rust</span>
             </div>
 
             <div class="tech-item" title="Golang">
-              <img src="https://skillicons.dev/icons?i=go&theme=dark" alt="Golang" title="Golang" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=go&theme=dark" alt="Golang" title="Golang" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Golang</span>
             </div>
 
             <div class="tech-item" title="Python">
-              <img src="https://skillicons.dev/icons?i=py&theme=dark" alt="Python" title="Python" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=py&theme=dark" alt="Python" title="Python" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Python</span>
             </div>
 
             <div class="tech-item" title="Bun">
-              <img src="https://skillicons.dev/icons?i=bun&theme=dark" alt="Bun" title="Bun" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=bun&theme=dark" alt="Bun" title="Bun" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Bun</span>
             </div>
 
             <div class="tech-item" title="Node.js">
-              <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" title="Node.js" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=nodejs&theme=dark" alt="Node.js" title="Node.js" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Node.js</span>
             </div>
 
             <div class="tech-item" title="C++">
-              <img src="https://skillicons.dev/icons?i=cpp&theme=dark" alt="C++" title="C++" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=cpp&theme=dark" alt="C++" title="C++" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">C++</span>
             </div>
 
             <div class="tech-item" title="C#">
-              <img src="https://skillicons.dev/icons?i=cs&theme=dark" alt="C#" title="C#" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=cs&theme=dark" alt="C#" title="C#" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">C#</span>
             </div>
 
             <div class="tech-item" title="C">
-              <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C" title="C" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=c&theme=dark" alt="C" title="C" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">C</span>
             </div>
 
             <div class="tech-item" title="PHP">
-              <img src="https://skillicons.dev/icons?i=php&theme=dark" alt="PHP" title="PHP" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=php&theme=dark" alt="PHP" title="PHP" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">PHP</span>
             </div>
 
             <div class="tech-item" title="Dart">
-              <img src="https://skillicons.dev/icons?i=dart&theme=dark" alt="Dart" title="Dart" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=dart&theme=dark" alt="Dart" title="Dart" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Dart</span>
             </div>
 
             <div class="tech-item" title="Kotlin">
-              <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin" title="Kotlin" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=kotlin&theme=dark" alt="Kotlin" title="Kotlin" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Kotlin</span>
             </div>
 
             <div class="tech-item" title="WebAssembly">
-              <img src="https://skillicons.dev/icons?i=wasm&theme=dark" alt="WebAssembly" title="WebAssembly" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=wasm&theme=dark" alt="WebAssembly" title="WebAssembly" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">WebAssembly</span>
             </div>
 
             <div class="tech-item" title="Bash / Shell">
-              <img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash / Shell" title="Bash / Shell" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=bash&theme=dark" alt="Bash / Shell" title="Bash / Shell" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Bash / Shell</span>
             </div>
           </div>
@@ -1100,67 +1405,67 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="Next.js 15">
-              <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" alt="Next.js 15" title="Next.js 15" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=nextjs&theme=dark" alt="Next.js 15" title="Next.js 15" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Next.js 15</span>
             </div>
 
             <div class="tech-item" title="React 19">
-              <img src="https://skillicons.dev/icons?i=react&theme=dark" alt="React 19" title="React 19" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=react&theme=dark" alt="React 19" title="React 19" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">React 19</span>
             </div>
 
             <div class="tech-item" title="SvelteKit">
-              <img src="https://skillicons.dev/icons?i=svelte&theme=dark" alt="SvelteKit" title="SvelteKit" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=svelte&theme=dark" alt="SvelteKit" title="SvelteKit" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">SvelteKit</span>
             </div>
 
             <div class="tech-item" title="Vue.js">
-              <img src="https://skillicons.dev/icons?i=vue&theme=dark" alt="Vue.js" title="Vue.js" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=vue&theme=dark" alt="Vue.js" title="Vue.js" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Vue.js</span>
             </div>
 
             <div class="tech-item" title="Nuxt.js 4">
-              <img src="https://skillicons.dev/icons?i=nuxtjs&theme=dark" alt="Nuxt.js 4" title="Nuxt.js 4" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=nuxtjs&theme=dark" alt="Nuxt.js 4" title="Nuxt.js 4" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Nuxt.js 4</span>
             </div>
 
             <div class="tech-item" title="Astro 5">
-              <img src="https://skillicons.dev/icons?i=astro&theme=dark" alt="Astro 5" title="Astro 5" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=astro&theme=dark" alt="Astro 5" title="Astro 5" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Astro 5</span>
             </div>
 
             <div class="tech-item" title="Tailwind CSS v4">
-              <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" alt="Tailwind CSS v4" title="Tailwind CSS v4" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=tailwind&theme=dark" alt="Tailwind CSS v4" title="Tailwind CSS v4" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Tailwind CSS v4</span>
             </div>
 
             <div class="tech-item" title="Bootstrap">
-              <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" alt="Bootstrap" title="Bootstrap" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=bootstrap&theme=dark" alt="Bootstrap" title="Bootstrap" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Bootstrap</span>
             </div>
 
             <div class="tech-item" title="Flutter">
-              <img src="https://skillicons.dev/icons?i=flutter&theme=dark" alt="Flutter" title="Flutter" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=flutter&theme=dark" alt="Flutter" title="Flutter" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Flutter</span>
             </div>
 
             <div class="tech-item" title="Three.js">
-              <img src="https://skillicons.dev/icons?i=threejs&theme=dark" alt="Three.js" title="Three.js" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=threejs&theme=dark" alt="Three.js" title="Three.js" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Three.js</span>
             </div>
 
             <div class="tech-item" title="Vite">
-              <img src="https://skillicons.dev/icons?i=vite&theme=dark" alt="Vite" title="Vite" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=vite&theme=dark" alt="Vite" title="Vite" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Vite</span>
             </div>
 
             <div class="tech-item" title="HTML5">
-              <img src="https://skillicons.dev/icons?i=html&theme=dark" alt="HTML5" title="HTML5" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=html&theme=dark" alt="HTML5" title="HTML5" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">HTML5</span>
             </div>
 
             <div class="tech-item" title="CSS3">
-              <img src="https://skillicons.dev/icons?i=css&theme=dark" alt="CSS3" title="CSS3" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=css&theme=dark" alt="CSS3" title="CSS3" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">CSS3</span>
             </div>
           </div>
@@ -1170,47 +1475,47 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="NestJS 11">
-              <img src="https://skillicons.dev/icons?i=nestjs&theme=dark" alt="NestJS 11" title="NestJS 11" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=nestjs&theme=dark" alt="NestJS 11" title="NestJS 11" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">NestJS 11</span>
             </div>
 
             <div class="tech-item" title="Express.js">
-              <img src="https://skillicons.dev/icons?i=express&theme=dark" alt="Express.js" title="Express.js" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=express&theme=dark" alt="Express.js" title="Express.js" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Express.js</span>
             </div>
 
             <div class="tech-item" title="ElysiaJS">
-              <img src="https://skillicons.dev/icons?i=elysia&theme=dark" alt="ElysiaJS" title="ElysiaJS" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=elysia&theme=dark" alt="ElysiaJS" title="ElysiaJS" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">ElysiaJS</span>
             </div>
 
             <div class="tech-item" title="Actix Web">
-              <img src="https://skillicons.dev/icons?i=actix&theme=dark" alt="Actix Web" title="Actix Web" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=actix&theme=dark" alt="Actix Web" title="Actix Web" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Actix Web</span>
             </div>
 
             <div class="tech-item" title="Laravel 12">
-              <img src="https://skillicons.dev/icons?i=laravel&theme=dark" alt="Laravel 12" title="Laravel 12" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=laravel&theme=dark" alt="Laravel 12" title="Laravel 12" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Laravel 12</span>
             </div>
 
             <div class="tech-item" title="FastAPI">
-              <img src="https://skillicons.dev/icons?i=fastapi&theme=dark" alt="FastAPI" title="FastAPI" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=fastapi&theme=dark" alt="FastAPI" title="FastAPI" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">FastAPI</span>
             </div>
 
             <div class="tech-item" title="Django">
-              <img src="https://skillicons.dev/icons?i=django&theme=dark" alt="Django" title="Django" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=django&theme=dark" alt="Django" title="Django" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Django</span>
             </div>
 
             <div class="tech-item" title="GraphQL">
-              <img src="https://skillicons.dev/icons?i=graphql&theme=dark" alt="GraphQL" title="GraphQL" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=graphql&theme=dark" alt="GraphQL" title="GraphQL" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">GraphQL</span>
             </div>
 
             <div class="tech-item" title="Swagger / OpenAPI">
-              <img src="https://skillicons.dev/icons?i=postman&theme=dark" alt="Swagger / OpenAPI" title="Swagger / OpenAPI" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=postman&theme=dark" alt="Swagger / OpenAPI" title="Swagger / OpenAPI" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Swagger / OpenAPI</span>
             </div>
           </div>
@@ -1220,47 +1525,47 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="PostgreSQL">
-              <img src="https://skillicons.dev/icons?i=postgres&theme=dark" alt="PostgreSQL" title="PostgreSQL" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=postgres&theme=dark" alt="PostgreSQL" title="PostgreSQL" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">PostgreSQL</span>
             </div>
 
             <div class="tech-item" title="MySQL / Oracle">
-              <img src="https://skillicons.dev/icons?i=mysql&theme=dark" alt="MySQL / Oracle" title="MySQL / Oracle" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=mysql&theme=dark" alt="MySQL / Oracle" title="MySQL / Oracle" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">MySQL / Oracle</span>
             </div>
 
             <div class="tech-item" title="MongoDB">
-              <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" alt="MongoDB" title="MongoDB" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=mongodb&theme=dark" alt="MongoDB" title="MongoDB" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">MongoDB</span>
             </div>
 
             <div class="tech-item" title="Redis">
-              <img src="https://skillicons.dev/icons?i=redis&theme=dark" alt="Redis" title="Redis" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=redis&theme=dark" alt="Redis" title="Redis" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Redis</span>
             </div>
 
             <div class="tech-item" title="Apache Kafka">
-              <img src="https://skillicons.dev/icons?i=kafka&theme=dark" alt="Apache Kafka" title="Apache Kafka" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=kafka&theme=dark" alt="Apache Kafka" title="Apache Kafka" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Apache Kafka</span>
             </div>
 
             <div class="tech-item" title="RabbitMQ">
-              <img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" alt="RabbitMQ" title="RabbitMQ" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=rabbitmq&theme=dark" alt="RabbitMQ" title="RabbitMQ" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">RabbitMQ</span>
             </div>
 
             <div class="tech-item" title="Prisma ORM">
-              <img src="https://skillicons.dev/icons?i=prisma&theme=dark" alt="Prisma ORM" title="Prisma ORM" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=prisma&theme=dark" alt="Prisma ORM" title="Prisma ORM" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Prisma ORM</span>
             </div>
 
             <div class="tech-item" title="SQLite">
-              <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" alt="SQLite" title="SQLite" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=sqlite&theme=dark" alt="SQLite" title="SQLite" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">SQLite</span>
             </div>
 
             <div class="tech-item" title="Supabase">
-              <img src="https://skillicons.dev/icons?i=supabase&theme=dark" alt="Supabase" title="Supabase" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=supabase&theme=dark" alt="Supabase" title="Supabase" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Supabase</span>
             </div>
           </div>
@@ -1270,32 +1575,32 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="PyTorch">
-              <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" alt="PyTorch" title="PyTorch" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=pytorch&theme=dark" alt="PyTorch" title="PyTorch" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">PyTorch</span>
             </div>
 
             <div class="tech-item" title="TensorFlow">
-              <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" alt="TensorFlow" title="TensorFlow" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=tensorflow&theme=dark" alt="TensorFlow" title="TensorFlow" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">TensorFlow</span>
             </div>
 
             <div class="tech-item" title="OpenCV">
-              <img src="https://skillicons.dev/icons?i=opencv&theme=dark" alt="OpenCV" title="OpenCV" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=opencv&theme=dark" alt="OpenCV" title="OpenCV" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">OpenCV</span>
             </div>
 
             <div class="tech-item" title="Arduino IoT">
-              <img src="https://skillicons.dev/icons?i=arduino&theme=dark" alt="Arduino IoT" title="Arduino IoT" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=arduino&theme=dark" alt="Arduino IoT" title="Arduino IoT" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Arduino IoT</span>
             </div>
 
             <div class="tech-item" title="Raspberry Pi">
-              <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" alt="Raspberry Pi" title="Raspberry Pi" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=raspberrypi&theme=dark" alt="Raspberry Pi" title="Raspberry Pi" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Raspberry Pi</span>
             </div>
 
             <div class="tech-item" title="ROS">
-              <img src="https://skillicons.dev/icons?i=ros&theme=dark" alt="ROS" title="ROS" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=ros&theme=dark" alt="ROS" title="ROS" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">ROS</span>
             </div>
           </div>
@@ -1305,77 +1610,77 @@
           <div class="tech-icons-row">
 
             <div class="tech-item" title="Docker">
-              <img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" title="Docker" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=docker&theme=dark" alt="Docker" title="Docker" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Docker</span>
             </div>
 
             <div class="tech-item" title="Kubernetes">
-              <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" title="Kubernetes" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=kubernetes&theme=dark" alt="Kubernetes" title="Kubernetes" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Kubernetes</span>
             </div>
 
             <div class="tech-item" title="AWS S3 / Cloud">
-              <img src="https://skillicons.dev/icons?i=aws&theme=dark" alt="AWS S3 / Cloud" title="AWS S3 / Cloud" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=aws&theme=dark" alt="AWS S3 / Cloud" title="AWS S3 / Cloud" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">AWS S3 / Cloud</span>
             </div>
 
             <div class="tech-item" title="Google Cloud">
-              <img src="https://skillicons.dev/icons?i=gcp&theme=dark" alt="Google Cloud" title="Google Cloud" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=gcp&theme=dark" alt="Google Cloud" title="Google Cloud" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Google Cloud</span>
             </div>
 
             <div class="tech-item" title="Terraform">
-              <img src="https://skillicons.dev/icons?i=terraform&theme=dark" alt="Terraform" title="Terraform" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=terraform&theme=dark" alt="Terraform" title="Terraform" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Terraform</span>
             </div>
 
             <div class="tech-item" title="Nginx">
-              <img src="https://skillicons.dev/icons?i=nginx&theme=dark" alt="Nginx" title="Nginx" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=nginx&theme=dark" alt="Nginx" title="Nginx" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Nginx</span>
             </div>
 
             <div class="tech-item" title="Cloudflare R2">
-              <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" alt="Cloudflare R2" title="Cloudflare R2" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=cloudflare&theme=dark" alt="Cloudflare R2" title="Cloudflare R2" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Cloudflare R2</span>
             </div>
 
             <div class="tech-item" title="Cloudflare Workers">
-              <img src="https://skillicons.dev/icons?i=workers&theme=dark" alt="Cloudflare Workers" title="Cloudflare Workers" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=workers&theme=dark" alt="Cloudflare Workers" title="Cloudflare Workers" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Cloudflare Workers</span>
             </div>
 
             <div class="tech-item" title="Arch Linux">
-              <img src="https://skillicons.dev/icons?i=linux&theme=dark" alt="Arch Linux" title="Arch Linux" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=linux&theme=dark" alt="Arch Linux" title="Arch Linux" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Arch Linux</span>
             </div>
 
             <div class="tech-item" title="Firebase">
-              <img src="https://skillicons.dev/icons?i=firebase&theme=dark" alt="Firebase" title="Firebase" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=firebase&theme=dark" alt="Firebase" title="Firebase" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Firebase</span>
             </div>
 
             <div class="tech-item" title="Sentry">
-              <img src="https://skillicons.dev/icons?i=sentry&theme=dark" alt="Sentry" title="Sentry" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=sentry&theme=dark" alt="Sentry" title="Sentry" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Sentry</span>
             </div>
 
             <div class="tech-item" title="Prometheus">
-              <img src="https://skillicons.dev/icons?i=prometheus&theme=dark" alt="Prometheus" title="Prometheus" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=prometheus&theme=dark" alt="Prometheus" title="Prometheus" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Prometheus</span>
             </div>
 
             <div class="tech-item" title="Grafana">
-              <img src="https://skillicons.dev/icons?i=grafana&theme=dark" alt="Grafana" title="Grafana" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=grafana&theme=dark" alt="Grafana" title="Grafana" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Grafana</span>
             </div>
 
             <div class="tech-item" title="GitHub Actions">
-              <img src="https://skillicons.dev/icons?i=githubactions&theme=dark" alt="GitHub Actions" title="GitHub Actions" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=githubactions&theme=dark" alt="GitHub Actions" title="GitHub Actions" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">GitHub Actions</span>
             </div>
 
             <div class="tech-item" title="Git">
-              <img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" title="Git" width="38" height="38" loading="lazy" />
+              <img src="https://skillicons.dev/icons?i=git&theme=dark" alt="Git" title="Git" width="34" height="34" loading="lazy" />
               <span class="tech-item-name">Git</span>
             </div>
           </div>
@@ -1664,32 +1969,6 @@
         </div>
       </article>
 
-      <article class="repo-card" data-category="archive" data-name="my-portofolio-showcase" data-featured="false">
-        <div class="card-header">
-          <div class="card-title-group">
-            <span class="repo-icon">📦</span>
-            <h3 class="repo-title">
-              <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" target="_blank" rel="noopener noreferrer">My-Portofolio-ShowCase</a>
-            </h3>
-          </div>
-          
-        </div>
-        <p class="repo-desc">Personal portfolio built with Next.js to showcase projects and skills</p>
-        <div class="card-footer">
-          <div class="repo-meta">
-            <span class="meta-tag meta-lang"><span class="lang-dot"></span>TypeScript</span>
-            <span class="meta-tag meta-stars">⭐ 0</span>
-            <span class="meta-tag meta-forks">🍴 0</span>
-          </div>
-          <div class="card-links">
-            <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for My-Portofolio-ShowCase">
-              <span>Code</span> ↗
-            </a>
-            <a href="https://rifky-akhmad-portofolio.vercel.app/" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
-          </div>
-        </div>
-      </article>
-
       <article class="repo-card" data-category="ai" data-name="rifkya911.github.io" data-featured="false">
         <div class="card-header">
           <div class="card-title-group">
@@ -1712,6 +1991,32 @@
               <span>Code</span> ↗
             </a>
             <a href="https://rifkya911.github.io" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
+          </div>
+        </div>
+      </article>
+
+      <article class="repo-card" data-category="archive" data-name="my-portofolio-showcase" data-featured="false">
+        <div class="card-header">
+          <div class="card-title-group">
+            <span class="repo-icon">📦</span>
+            <h3 class="repo-title">
+              <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" target="_blank" rel="noopener noreferrer">My-Portofolio-ShowCase</a>
+            </h3>
+          </div>
+          
+        </div>
+        <p class="repo-desc">Personal portfolio built with Next.js to showcase projects and skills</p>
+        <div class="card-footer">
+          <div class="repo-meta">
+            <span class="meta-tag meta-lang"><span class="lang-dot"></span>TypeScript</span>
+            <span class="meta-tag meta-stars">⭐ 0</span>
+            <span class="meta-tag meta-forks">🍴 0</span>
+          </div>
+          <div class="card-links">
+            <a href="https://github.com/RifkyA911/My-Portofolio-ShowCase" class="card-link-btn" target="_blank" rel="noopener noreferrer" aria-label="View code for My-Portofolio-ShowCase">
+              <span>Code</span> ↗
+            </a>
+            <a href="https://rifky-akhmad-portofolio.vercel.app/" class="card-link-btn live-btn" target="_blank" rel="noopener noreferrer"><span>Live</span> 🚀</a>
           </div>
         </div>
       </article>
@@ -2680,6 +2985,53 @@
     </section>
   </main>
 
+  <!-- CONTACT MODAL -->
+  <div id="contact-modal" class="contact-modal" role="dialog" aria-modal="true" aria-label="Contact Information">
+    <div class="contact-card">
+      <div class="contact-header">
+        <h3 class="contact-title" data-i18n="contact_modal_title">Direct Contact & Channels</h3>
+        <button id="contact-close-btn" class="contact-close" aria-label="Close Modal">&times;</button>
+      </div>
+      <div class="contact-items">
+        <div class="contact-row">
+          <div class="contact-row-info">
+            <span>📧</span>
+            <span id="email-text">rifkyakhmadfer@gmail.com</span>
+          </div>
+          <button id="copy-email-btn" class="copy-btn">Copy</button>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-info">
+            <span>💼</span>
+            <span>LinkedIn</span>
+          </div>
+          <a href="https://www.linkedin.com/in/rifkya911/" target="_blank" rel="noopener noreferrer" class="copy-btn">Open ↗</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-info">
+            <span>🎓</span>
+            <span>Google Scholar Profile</span>
+          </div>
+          <a href="https://scholar.google.com/citations?user=SPRDsG4AAAAJ&hl=en" target="_blank" rel="noopener noreferrer" class="copy-btn">Open ↗</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-info">
+            <span>🐙</span>
+            <span>GitHub (@RifkyA911)</span>
+          </div>
+          <a href="https://github.com/RifkyA911" target="_blank" rel="noopener noreferrer" class="copy-btn">Open ↗</a>
+        </div>
+        <div class="contact-row">
+          <div class="contact-row-info">
+            <span>📍</span>
+            <span>Bojonegoro, Jawa Timur, Indonesia (UTC+7)</span>
+          </div>
+          <span style="font-size: 0.78rem; color: var(--accent);">Active</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- STICKY BUTTON: INTERACTIVE TERMINAL CLI (KOTAK ROUNDED) -->
   <button id="term-toggle-btn" class="term-toggle-btn" aria-label="Open Terminal CLI" title="Open Terminal CLI (Ctrl + `)">
     <span class="term-btn-icon">&gt;_</span>
@@ -2691,7 +3043,7 @@
       <div class="term-header">
         <div class="term-title">
           <span>⚡</span>
-          <span>rifky@bojonegoro-station:~ (zsh + wireguard)</span>
+          <span id="term-header-title">rifky@bojonegoro-station:~ (zsh + psql)</span>
         </div>
         <div class="term-controls">
           <span class="term-dot min" title="Minimize"></span>
@@ -2702,23 +3054,38 @@
       <div id="term-body" class="term-body">
         <div id="term-output"></div>
         <div class="term-input-row">
-          <span class="term-prompt"><span class="c-user">visitor@rifkya911</span>:<span class="c-path">~</span><span class="c-sym">$</span></span>
+          <span id="term-prompt-label" class="term-prompt"><span class="c-user">rifky@station</span>:<span class="c-path">~</span><span class="c-sym">$</span></span>
           <input type="text" id="term-input" class="term-input" autocomplete="off" spellcheck="false" autofocus />
         </div>
       </div>
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <footer>
-    <p>© 2026 Rifky Akhmad Fernanda (@RifkyA911). Built with pure semantic web standards.</p>
-    <p style="margin-top: 0.35rem;">
-      <a href="https://github.com/RifkyA911/RifkyA911.github.io" target="_blank" rel="noopener noreferrer">Source Code</a> • 
-      <a href="./CV_Rifky_Akhmad_Fernanda.pdf" target="_blank">CV (PDF)</a> • 
-      <a href="https://scholar.google.com/citations?user=SPRDsG4AAAAJ&hl=en" target="_blank">Scholar</a> • 
-      <a href="https://www.linkedin.com/in/rifkya911/" target="_blank">LinkedIn</a>
-    </p>
-  </footer>
+  <!-- FOOTER WITH ANIMATED FLUID OCEAN WAVES -->
+  <div class="ocean-wrapper">
+    <div class="ocean-waves">
+      <svg class="waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 24 150 28" preserveAspectRatio="none" shape-rendering="auto">
+        <defs>
+          <path id="gentle-wave" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z" />
+        </defs>
+        <g class="parallax-waves">
+          <use xlink:href="#gentle-wave" x="48" y="0" fill="rgba(56, 139, 253, 0.15)" />
+          <use xlink:href="#gentle-wave" x="48" y="3" fill="rgba(56, 139, 253, 0.28)" />
+          <use xlink:href="#gentle-wave" x="48" y="5" fill="rgba(56, 139, 253, 0.42)" />
+          <use xlink:href="#gentle-wave" x="48" y="7" fill="var(--footer-solid)" />
+        </g>
+      </svg>
+    </div>
+    <footer class="solid-footer">
+      <p>© 2026 Rifky Akhmad Fernanda (@RifkyA911). Built with pure semantic web standards.</p>
+      <p style="margin-top: 0.35rem;">
+        <a href="https://github.com/RifkyA911/RifkyA911.github.io" target="_blank" rel="noopener noreferrer">Source Code</a> • 
+        <a href="javascript:void(0)" onclick="document.getElementById('contact-modal').classList.add('open')">Contact</a> • 
+        <a href="https://scholar.google.com/citations?user=SPRDsG4AAAAJ&hl=en" target="_blank">Scholar</a> • 
+        <a href="https://www.linkedin.com/in/rifkya911/" target="_blank">LinkedIn</a>
+      </p>
+    </footer>
+  </div>
 
   <script>
     (function() {
@@ -2726,11 +3093,13 @@
       const i18n = {
         en: {
           theme_btn: "Theme",
-          cv_nav: "📄 CV",
-          hero_status: "Available for Systems & AI Engineering",
-          hero_role: "Systems Architecture • AI Platforms & MCP • High-Concurrency Backends",
+          nav_spectrum: "Tech Spectrum",
+          nav_systems: "Systems & Repos",
+          nav_contact: "💬 Contact",
+          hero_status: "Open for Systems & AI Roles",
+          hero_role: "Systems Architecture • AI Platforms & MCP • Concurrent Backends",
           hero_bio: "Software Engineer with 4+ years of production experience architecting mission-critical retail POS infrastructures, healthcare platforms for the Ministry of Health RI, autonomous AI guardrails in Rust, and decentralized Web3 systems. Based in Bojonegoro, Indonesia.",
-          download_cv: "Download Full CV (PDF)",
+          get_in_touch: "Get In Touch",
           stat_repos: "Public Repositories",
           stat_experience: "Production Experience",
           stat_scholar: "Scholar Publications",
@@ -2744,15 +3113,20 @@
           tab_tools: "Developer Tools & CLIs",
           tab_archive: "Legacy & Archived",
           badge_featured: "Featured",
-          search_placeholder: "Search systems, repositories, tags (e.g. rust, mcp, sentry, voting, next)..."
+          search_placeholder: "Search systems, repositories, tags (e.g. rust, mcp, sentry, voting, next)...",
+          contact_modal_title: "Direct Contact & Channels",
+          palette_heading: "Color Palette",
+          mode_label: "Appearance Mode"
         },
         id: {
           theme_btn: "Tema",
-          cv_nav: "📄 Unduh CV",
-          hero_status: "Terbuka untuk Proyek Sistem & Rekayasa AI",
-          hero_role: "Arsitektur Sistem • Platform AI & MCP • Backend Konkurensi Tinggi",
+          nav_spectrum: "Spektrum Teknologi",
+          nav_systems: "Sistem & Repositori",
+          nav_contact: "💬 Kontak",
+          hero_status: "Terbuka untuk Peran Sistem & AI",
+          hero_role: "Arsitektur Sistem • Platform AI & MCP • Backend Konkuren",
           hero_bio: "Software Engineer dengan pengalaman produksi 4+ tahun dalam merancang infrastruktur POS retail nasional, portal kesehatan Kementerian Kesehatan RI, AI guardrail otonom berbasis Rust, dan platform Web3 terdesentralisasi. Berdomisili di Bojonegoro, Indonesia.",
-          download_cv: "Unduh CV Lengkap (PDF)",
+          get_in_touch: "Hubungi Langsung",
           stat_repos: "Repositori Publik",
           stat_experience: "Tahun Pengalaman",
           stat_scholar: "Publikasi Scholar",
@@ -2766,7 +3140,10 @@
           tab_tools: "Perkakas & CLI",
           tab_archive: "Arsip & Warisan",
           badge_featured: "Unggulan",
-          search_placeholder: "Cari sistem, repositori, teknologi (misal: rust, mcp, sentry, pos, next)..."
+          search_placeholder: "Cari sistem, repositori, teknologi (misal: rust, mcp, sentry, pos, next)...",
+          contact_modal_title: "Saluran & Kontak Langsung",
+          palette_heading: "Pilihan Warna Palet",
+          mode_label: "Mode Tampilan"
         }
       };
 
@@ -2784,7 +3161,6 @@
           if (dict[key]) el.textContent = dict[key];
         });
 
-        // Translate tech group titles
         document.querySelectorAll(".tech-group-title").forEach(el => {
           const val = el.getAttribute("data-" + lang);
           if (val) el.textContent = val;
@@ -2801,42 +3177,79 @@
       });
       applyLang(currentLang);
 
-      // 2. THEME SWITCHER
-      const themes = ["tokyonight", "matrix", "amoled", "nord", "cyberpunk", "light"];
+      // 2. THEME & PALETTE MANAGER (DARK / LIGHT + 6 COLOR PRESETS)
       let currentTheme = localStorage.getItem("rifky_theme") || "tokyonight";
+      let currentMode = localStorage.getItem("rifky_mode") || "dark";
+
       function applyTheme(theme) {
         currentTheme = theme;
         localStorage.setItem("rifky_theme", theme);
         document.documentElement.setAttribute("data-theme", theme);
+        document.querySelectorAll(".palette-choice").forEach(el => {
+          if (el.getAttribute("data-theme") === theme) el.classList.add("active");
+          else el.classList.remove("active");
+        });
       }
-      document.getElementById("theme-toggle-btn").addEventListener("click", () => {
-        const next = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
-        applyTheme(next);
-      });
-      applyTheme(currentTheme);
 
-      // 3. PARALLAX "SUNDUL" & MOUSE TILT PHYSICS
-      const heroTitle = document.getElementById("parallax-title");
-      window.addEventListener("mousemove", (e) => {
-        const xPercent = (e.clientX / window.innerWidth) - 0.5;
-        const yPercent = (e.clientY / window.innerHeight) - 0.5;
-        if (heroTitle) {
-          heroTitle.style.transform = `translate(${xPercent * 14}px, ${yPercent * 8}px)`;
+      function applyMode(mode) {
+        currentMode = mode;
+        localStorage.setItem("rifky_mode", mode);
+        document.documentElement.setAttribute("data-mode", mode);
+        const modeBtn = document.getElementById("mode-toggle-btn");
+        if (modeBtn) modeBtn.textContent = mode === "dark" ? "☀️ Light" : "🌙 Dark";
+      }
+
+      const themeBtn = document.getElementById("theme-btn");
+      const paletteDropdown = document.getElementById("palette-dropdown");
+      themeBtn.addEventListener("click", (e) => {
+        e.stopPropagation();
+        paletteDropdown.classList.toggle("show");
+      });
+      document.addEventListener("click", (e) => {
+        if (!paletteDropdown.contains(e.target) && e.target !== themeBtn) {
+          paletteDropdown.classList.remove("show");
         }
       });
 
-      // Card 3D Tilt on Hover
-      document.querySelectorAll(".repo-card").forEach(card => {
-        card.addEventListener("mousemove", (e) => {
-          const rect = card.getBoundingClientRect();
-          const x = e.clientX - rect.left - (rect.width / 2);
-          const y = e.clientY - rect.top - (rect.height / 2);
-          const rotX = -(y / rect.height) * 12;
-          const rotY = (x / rect.width) * 12;
-          card.style.transform = `perspective(1000px) rotateX(${rotX}deg) rotateY(${rotY}deg) translateY(-8px) scale(1.025)`;
+      document.querySelectorAll(".palette-choice").forEach(choice => {
+        choice.addEventListener("click", () => {
+          applyTheme(choice.getAttribute("data-theme"));
         });
-        card.addEventListener("mouseleave", () => {
-          card.style.transform = "";
+      });
+
+      document.getElementById("mode-toggle-btn").addEventListener("click", () => {
+        applyMode(currentMode === "dark" ? "light" : "dark");
+      });
+
+      applyTheme(currentTheme);
+      applyMode(currentMode);
+
+      // 3. CONTACT MODAL LOGIC
+      const contactModal = document.getElementById("contact-modal");
+      const contactNavBtn = document.getElementById("contact-nav-btn");
+      const heroContactBtn = document.getElementById("hero-contact-btn");
+      const contactCloseBtn = document.getElementById("contact-close-btn");
+
+      function openContactModal() {
+        contactModal.classList.add("open");
+      }
+      function closeContactModal() {
+        contactModal.classList.remove("open");
+      }
+
+      contactNavBtn.addEventListener("click", openContactModal);
+      if (heroContactBtn) heroContactBtn.addEventListener("click", openContactModal);
+      contactCloseBtn.addEventListener("click", closeContactModal);
+      contactModal.addEventListener("click", (e) => {
+        if (e.target === contactModal) closeContactModal();
+      });
+
+      // Copy email button
+      const copyEmailBtn = document.getElementById("copy-email-btn");
+      copyEmailBtn.addEventListener("click", () => {
+        navigator.clipboard.writeText("rifkyakhmadfer@gmail.com").then(() => {
+          copyEmailBtn.textContent = "Copied! ✔";
+          setTimeout(() => { copyEmailBtn.textContent = "Copy"; }, 2000);
         });
       });
 
@@ -2844,7 +3257,6 @@
       const searchInput = document.getElementById("search-input");
       const tabBtns = document.querySelectorAll(".tab-btn");
       const repoCards = document.querySelectorAll(".repo-card");
-
       let currentCategory = "all";
 
       function filterCards() {
@@ -2873,18 +3285,111 @@
           filterCards();
         });
       });
-
       searchInput.addEventListener("input", filterCards);
 
-      // 5. INTERACTIVE TERMINAL CLI & VPN/SSH SIMULATION
+      // 5. IN-MEMORY VIRTUAL FILESYSTEM & DIRECTORY EXPLORER
+      const vfs = {
+        "/home/rifky": {
+          type: "dir",
+          children: ["projects", "about", "research", "README.md", "contact.txt"]
+        },
+        "/home/rifky/projects": {
+          type: "dir",
+          children: ["novasentry.rs", "tapvote.ts", "momentum.vue", "mirunova.svelte", "inventory_pos.php"]
+        },
+        "/home/rifky/about": {
+          type: "dir",
+          children: ["bio.md", "education.txt"]
+        },
+        "/home/rifky/research": {
+          type: "dir",
+          children: ["k-means-covid.pdf", "software-metrics.txt", "iot-incubator.txt"]
+        },
+        "/home/rifky/README.md": {
+          type: "file",
+          size: "1.2KB",
+          content: "# Rifky Akhmad Fernanda\nSystems Architect & Full-Stack Engineer.\nSpecializing in high-throughput concurrent backends (Rust/Go), AI guardrails, and deterministic MCP servers."
+        },
+        "/home/rifky/contact.txt": {
+          type: "file",
+          size: "240B",
+          content: "Email: rifkyakhmadfer@gmail.com\nLinkedIn: linkedin.com/in/rifkya911\nScholar: SPRDsG4AAAAJ\nLocation: Bojonegoro, Jawa Timur, Indonesia"
+        },
+        "/home/rifky/projects/novasentry.rs": {
+          type: "file",
+          size: "4.8KB",
+          content: "// NovaSentry Core\npub async fn evaluate_guardrail(prompt: &str) -> Result<Verdict, Error> {\n    let latency = measure_sub35ms();\n    mcp_audit_stream(prompt, latency).await\n}"
+        },
+        "/home/rifky/projects/tapvote.ts": {
+          type: "file",
+          size: "3.2KB",
+          content: "// TapVote-AI Engine\nimport { MCPClient } from '@modelcontextprotocol/sdk';\nexport function onRFIDTap(cardId: string) {\n    dispatchSSEEvent({ status: 'AUTHENTICATED', cardId });\n}"
+        },
+        "/home/rifky/about/bio.md": {
+          type: "file",
+          size: "820B",
+          content: "Rifky Akhmad Fernanda\n4+ Years in Production (2021-Present).\nExperience across UBS Gold POS, Ministry of Health portals, and Web3 e-commerce."
+        },
+        "/home/rifky/about/education.txt": {
+          type: "file",
+          size: "310B",
+          content: "Universitas Pembangunan Nasional 'Veteran' Jawa Timur\nInformatics Engineering (S.Kom) - Cum Laude (GPA: 3.82 / 4.00)\nJul 2018 - Jul 2022"
+        }
+      };
+
+      let currentCwd = "/home/rifky";
+
+      // 6. POSTGRESQL SIMULATION ENGINE
+      let inPsql = false;
+      const psqlTables = {
+        projects: [
+          { id: 1, name: "NovaSentry", language: "Rust", role: "AI Security Sentry", stars: 12 },
+          { id: 2, name: "TapVote-AI", language: "TypeScript", role: "E-Voting Kiosk + MCP", stars: 8 },
+          { id: 3, name: "Momentum", language: "Vue/Nuxt", role: "Habit Intelligence", stars: 6 },
+          { id: 4, name: "mirunova-live", language: "SvelteKit", role: "Client Vision WebGL", stars: 24 }
+        ],
+        skills: [
+          { domain: "Languages", stack: "Rust, Go, TypeScript, Python, PHP, C++", level: "Senior" },
+          { domain: "AI / MCP", stack: "Gemini 2.0, Groq LLaMA, Model Context Protocol, RAG", level: "Expert" },
+          { domain: "Databases", stack: "PostgreSQL, Oracle SQL, MySQL, Redis, Kafka", level: "Production" },
+          { domain: "Cloud / Infra", stack: "Docker, Linux, Terraform, Nginx, Prometheus", level: "Advanced" }
+        ],
+        experience: [
+          { company: "PT UBS Gold", role: "Full-Stack Web & Android", impact: "Oracle DB locking slashed 35%" },
+          { company: "PT Tunas Kreasi", role: "Frontend Developer", impact: "50K TanStack Virtual table 60 FPS" },
+          { company: "PT Wibu Sukses", role: "Full-Stack Web Developer", impact: "Xendit 99.8% reliability, Discord bot" },
+          { company: "PT MWTech / Daya", role: "Freelance Lead", impact: "3x Kemenkes portals, Nginx 99.9%" }
+        ],
+        scholar: [
+          { year: 2021, title: "K-Means Covid-19 Clustering Analysis", index: "Google Scholar" },
+          { year: 2021, title: "Software Metrics Comparison (LOC, COCOMO, FPA)", index: "Google Scholar" },
+          { year: 2022, title: "IoT Telemetry Incubator Fuzzy Logic", index: "Google Scholar" }
+        ]
+      };
+
+      // 7. TERMINAL CLI MODAL & BOOT
       const modal = document.getElementById("term-modal");
       const toggleBtn = document.getElementById("term-toggle-btn");
+      const termNavLink = document.getElementById("term-nav-link");
       const closeBtn = document.getElementById("term-close-btn");
       const input = document.getElementById("term-input");
       const output = document.getElementById("term-output");
       const body = document.getElementById("term-body");
+      const promptLabel = document.getElementById("term-prompt-label");
+      const termHeaderTitle = document.getElementById("term-header-title");
 
       let hasBooted = false;
+
+      function updatePrompt() {
+        if (inPsql) {
+          promptLabel.innerHTML = `<span class="c-gold">rifky_db=#</span>`;
+          termHeaderTitle.textContent = "psql (PostgreSQL 17.2, rifky_db)";
+        } else {
+          const shortPath = currentCwd === "/home/rifky" ? "~" : currentCwd.replace("/home/rifky", "~");
+          promptLabel.innerHTML = `<span class="c-user">rifky@station</span>:<span class="c-path">${shortPath}</span><span class="c-sym">$</span>`;
+          termHeaderTitle.textContent = `rifky@bojonegoro-station:${shortPath} (zsh)`;
+        }
+      }
 
       function openTerminal() {
         modal.classList.add("open");
@@ -2894,12 +3399,12 @@
           hasBooted = true;
         }
       }
-
       function closeTerminal() {
         modal.classList.remove("open");
       }
 
       toggleBtn.addEventListener("click", openTerminal);
+      if (termNavLink) termNavLink.addEventListener("click", openTerminal);
       closeBtn.addEventListener("click", closeTerminal);
       modal.addEventListener("click", (e) => {
         if (e.target === modal) closeTerminal();
@@ -2923,29 +3428,40 @@
         body.scrollTop = body.scrollHeight;
       }
 
-      // VPN & SSH BOOT ANIMATION
+      // SSH BOOT SEQUENCE -> CLEARS SCREEN & PRINTS WELCOME BANNER
       function bootSequence() {
         const steps = [
-          "<span class='c-dim'>[16:20:01]</span> <span class='c-accent'>[INIT]</span> Initializing WireGuard VPN handshake to endpoint 103.181.42.10:51820...",
-          "<span class='c-dim'>[16:20:01]</span> <span class='c-gold'>[VPN]</span> Handshake established (IP: 10.8.0.42/32, MTU: 1420, ping: 1.1ms)",
-          "<span class='c-dim'>[16:20:02]</span> <span class='c-accent'>[SSH]</span> Initiating SSHv2 handshake to gateway.rifkya911.local:22...",
-          "<span class='c-dim'>[16:20:02]</span> <span class='c-gold'>[SSH]</span> Host key fingerprint SHA256:7uK8m4BqX1... (ED25519) accepted.",
-          "<span class='c-dim'>[16:20:02]</span> <span class='c-user'>[AUTH]</span> Hardware token ed25519-sk authenticated as 'rifky'. Access GRANTED.",
-          "<span class='c-dim'>[16:20:03]</span> <span class='c-purple'>[SYS]</span> PTY allocated (pty/0) - Arch Linux 6.12.9-zen1-1-zen (x86_64)",
-          "<span class='c-dim'>───────────────────────────────────────────────────────────────────────</span>",
-          "<span class='c-gold'>Welcome to Station Bojonegoro (RifkyA911 Terminal Hub)</span>",
-          "Type <span class='c-cmd'>'help'</span>, <span class='c-cmd'>'neofetch'</span>, <span class='c-cmd'>'btop'</span>, or <span class='c-cmd'>'cv'</span> to explore systems telemetry."
+          "<span class='c-dim'>[●]</span> <span class='c-accent'>Handshaking WireGuard VPN (wg0)...</span>",
+          "<span class='c-dim'>[✔]</span> <span class='c-gold'>Endpoint verified: 103.181.42.10:51820 (IP: 10.8.0.42/32, latency 1.1ms)</span>",
+          "<span class='c-dim'>[●]</span> <span class='c-accent'>SSHv2 handshake to gateway.rifkya911.local:22...</span>",
+          "<span class='c-dim'>[✔]</span> <span class='c-user'>FIDO2 hardware key ed25519-sk verified. Access GRANTED.</span>"
         ];
 
-        let i = 0;
-        function nextStep() {
-          if (i < steps.length) {
-            appendLine(steps[i]);
-            i++;
-            setTimeout(nextStep, 100);
+        let idx = 0;
+        function next() {
+          if (idx < steps.length) {
+            appendLine(steps[idx]);
+            idx++;
+            setTimeout(next, 90);
+          } else {
+            setTimeout(() => {
+              // CLEAR SCREEN AFTER LOGIN
+              output.innerHTML = "";
+              appendLine(`
+<span class="c-accent">██████╗ ██╗███████╗██╗  ██╗██╗   ██╗ █████╗  █████╗  ██╗</span>
+<span class="c-accent">██╔══██╗██║██╔════╝██║ ██╔╝╚██╗ ██╔╝██╔══██╗██╔══██╗███║</span>
+<span class="c-accent">██████╔╝██║█████╗  █████╔╝  ╚████╔╝ ╚██████║╚██████║╚██║</span>
+<span class="c-accent">██╔══██╗██║██╔══╝  ██╔═██╗   ╚██╔╝   ╚═══██║ ╚═══██║ ██║</span>
+<span class="c-accent">██║  ██║██║██║     ██║  ██╗   ██║    █████╔╝ █████╔╝ ██║</span>
+<span class="c-accent">╚═╝  ╚═╝╚═╝╚═╝     ╚═╝  ╚═╝   ╚═╝    ╚════╝  ╚════╝  ╚═╝</span>
+<span class="c-gold">Logged in:</span> <span class="c-user">rifky@bojonegoro-station</span> (Arch Linux 6.12.9-zen1-1-zen)
+<span class="c-dim">Type </span><span class="c-cmd">'help'</span><span class="c-dim"> for shell commands, </span><span class="c-cmd">'explorer'</span><span class="c-dim"> for directory tree, or </span><span class="c-cmd">'psql'</span><span class="c-dim"> to enter PostgreSQL.</span>
+              `);
+              updatePrompt();
+            }, 250);
           }
         }
-        nextStep();
+        next();
       }
 
       // COMMAND HISTORY
@@ -2960,7 +3476,11 @@
             history.push(val);
             historyIdx = history.length;
           }
-          executeCommand(val);
+          if (inPsql) {
+            executePsqlCommand(val);
+          } else {
+            executeShellCommand(val);
+          }
         } else if (e.key === "ArrowUp") {
           e.preventDefault();
           if (historyIdx > 0) {
@@ -2979,29 +3499,157 @@
         }
       });
 
-      function executeCommand(raw) {
+      // SHELL COMMAND HANDLER
+      function executeShellCommand(raw) {
         const trimmed = raw.trim();
-        appendLine(`<span class="term-prompt"><span class="c-user">visitor@rifkya911</span>:<span class="c-path">~</span><span class="c-sym">$</span></span> <span class="term-cmd-echo">${htmlEscape(trimmed)}</span>`);
+        appendLine(`${promptLabel.innerHTML} <span class="term-cmd-echo">${htmlEscape(trimmed)}</span>`);
 
         const parts = trimmed.split(/\s+/);
         const cmd = parts[0].toLowerCase();
-        const arg = parts.slice(1).join(" ").toLowerCase();
+        const arg = parts.slice(1).join(" ");
 
         switch (cmd) {
           case "help":
           case "?":
             appendLine(`
-<span class="c-gold">AVAILABLE TERMINAL COMMANDS:</span>
-  <span class="c-cmd">neofetch</span>        Display full ASCII architecture & hardware telemetry
-  <span class="c-cmd">btop</span>            Interactive real-time ASCII CPU/MEM process monitor
-  <span class="c-cmd">cv / resume</span>     Inspect & download official CV (PDF)
-  <span class="c-cmd">whoami</span>          Developer profile & systems philosophy
-  <span class="c-cmd">ls / projects</span>   List core repositories & classification
-  <span class="c-cmd">cat &lt;repo&gt;</span>      Deep dive into project architecture (e.g. <span class="c-accent">cat novasentry</span>)
-  <span class="c-cmd">theme</span>           Cycle interface color theme
-  <span class="c-cmd">lang</span>            Toggle language (ID / EN)
-  <span class="c-cmd">clear / cls</span>     Clear screen
-  <span class="c-cmd">exit / quit</span>     Close terminal
+<span class="c-gold">AVAILABLE SHELL COMMANDS:</span>
+  <span class="c-cmd">ls [-la]</span>         List directory contents
+  <span class="c-cmd">cd &lt;dir&gt;</span>         Change directory (e.g. <span class="c-accent">cd projects</span>, <span class="c-accent">cd ..</span>)
+  <span class="c-cmd">pwd</span>              Print working directory
+  <span class="c-cmd">cat &lt;file&gt;</span>       Display file content (e.g. <span class="c-accent">cat README.md</span>)
+  <span class="c-cmd">nano &lt;file&gt;</span>      Open in-terminal text editor viewer
+  <span class="c-cmd">rm &lt;file&gt;</span>        Remove file simulator
+  <span class="c-cmd">explorer / tree</span>  Render ASCII directory structure
+  <span class="c-cmd">psql / postgres</span>  Enter interactive PostgreSQL database shell
+  <span class="c-cmd">neofetch</span>         Badass, ultra-detailed system architecture telemetry
+  <span class="c-cmd">btop</span>             Interactive real-time CPU/MEM process monitor
+  <span class="c-cmd">whoami</span>           Systems philosophy & engineer summary
+  <span class="c-cmd">clear / cls</span>      Clear screen
+  <span class="c-cmd">exit / quit</span>      Close terminal
+            `);
+            break;
+
+          case "ls":
+            const currentDir = vfs[currentCwd];
+            if (!currentDir || currentDir.type !== "dir") {
+              appendLine(`<span class="c-error">ls: cannot access '${currentCwd}': Not a directory</span>`);
+              break;
+            }
+            if (arg === "-la" || arg === "-l" || arg === "-al") {
+              appendLine(`<span class="c-dim">total ${currentDir.children.length * 4}</span>`);
+              appendLine(`<span class="c-dim">drwxr-xr-x  2 rifky rifky 4096 Oct 11 16:40</span> <span class="c-accent">.</span>`);
+              appendLine(`<span class="c-dim">drwxr-xr-x  4 rifky rifky 4096 Oct 11 16:30</span> <span class="c-accent">..</span>`);
+              currentDir.children.forEach(item => {
+                const itemPath = currentCwd + "/" + item;
+                const isDir = vfs[itemPath] && vfs[itemPath].type === "dir";
+                const perm = isDir ? "drwxr-xr-x" : "-rw-r--r--";
+                const size = isDir ? "4096" : (vfs[itemPath]?.size || "512B");
+                const colorClass = isDir ? "c-accent" : "c-user";
+                appendLine(`<span class="c-dim">${perm}  1 rifky rifky ${size.padStart(6, ' ')} Oct 11 16:40</span> <span class="${colorClass}">${item}${isDir ? '/' : ''}</span>`);
+              });
+            } else {
+              const formatted = currentDir.children.map(item => {
+                const itemPath = currentCwd + "/" + item;
+                const isDir = vfs[itemPath] && vfs[itemPath].type === "dir";
+                return isDir ? `<span class="c-accent"><b>${item}/</b></span>` : `<span class="c-user">${item}</span>`;
+              }).join("   ");
+              appendLine(formatted);
+            }
+            break;
+
+          case "cd":
+            if (!arg || arg === "~") {
+              currentCwd = "/home/rifky";
+              updatePrompt();
+            } else if (arg === "..") {
+              if (currentCwd !== "/home/rifky") {
+                const parts = currentCwd.split("/");
+                parts.pop();
+                currentCwd = parts.join("/") || "/home/rifky";
+                updatePrompt();
+              }
+            } else {
+              const target = currentCwd + "/" + arg.replace(/^\//, "");
+              if (vfs[target] && vfs[target].type === "dir") {
+                currentCwd = target;
+                updatePrompt();
+              } else {
+                appendLine(`<span class="c-error">cd: no such file or directory: ${htmlEscape(arg)}</span>`);
+              }
+            }
+            break;
+
+          case "pwd":
+            appendLine(currentCwd);
+            break;
+
+          case "cat":
+            if (!arg) {
+              appendLine(`<span class="c-warn">usage: cat &lt;filename&gt;</span>`);
+              break;
+            }
+            const catPath = currentCwd + "/" + arg;
+            if (vfs[catPath] && vfs[catPath].type === "file") {
+              appendLine(htmlEscape(vfs[catPath].content));
+            } else {
+              appendLine(`<span class="c-error">cat: ${htmlEscape(arg)}: No such file or directory</span>`);
+            }
+            break;
+
+          case "nano":
+            if (!arg) {
+              appendLine(`<span class="c-warn">usage: nano &lt;filename&gt;</span>`);
+              break;
+            }
+            const nanoPath = currentCwd + "/" + arg;
+            const content = vfs[nanoPath]?.content || "// [New Empty Buffer]";
+            appendLine(`
+<span style="background:#2ea44f;color:#000;font-weight:700;display:block;padding:2px 6px;"> GNU nano 8.2                    File: ${htmlEscape(arg)} </span>
+${htmlEscape(content)}
+<span style="background:#30363d;color:#fff;display:block;padding:2px 6px;margin-top:8px;">^G Get Help   ^O WriteOut   ^W Where Is   ^K Cut Text   ^X Exit (Read-Only Buffer)</span>
+            `);
+            break;
+
+          case "rm":
+            if (!arg) {
+              appendLine(`<span class="c-warn">usage: rm &lt;filename&gt;</span>`);
+              break;
+            }
+            appendLine(`<span class="c-warn">rm: cannot remove '${htmlEscape(arg)}': Permission denied (Read-only sandbox security guardrail active).</span>`);
+            break;
+
+          case "tree":
+          case "explorer":
+            appendLine(`
+<span class="c-gold">Directory Explorer: /home/rifky</span>
+.
+├── <span class="c-accent">about/</span>
+│   ├── <span class="c-user">bio.md</span>
+│   └── <span class="c-user">education.txt</span>
+├── <span class="c-accent">projects/</span>
+│   ├── <span class="c-user">inventory_pos.php</span>
+│   ├── <span class="c-user">mirunova.svelte</span>
+│   ├── <span class="c-user">momentum.vue</span>
+│   ├── <span class="c-user">novasentry.rs</span>
+│   └── <span class="c-user">tapvote.ts</span>
+├── <span class="c-accent">research/</span>
+│   ├── <span class="c-user">iot-incubator.txt</span>
+│   ├── <span class="c-user">k-means-covid.pdf</span>
+│   └── <span class="c-user">software-metrics.txt</span>
+├── <span class="c-user">contact.txt</span>
+└── <span class="c-user">README.md</span>
+
+3 directories, 10 files
+            `);
+            break;
+
+          case "psql":
+          case "postgres":
+            inPsql = true;
+            updatePrompt();
+            appendLine(`
+<span class="c-accent">psql (PostgreSQL 17.2, client 17.2)</span>
+Type "help" for help, "\dt" to list tables, "SELECT * FROM &lt;table&gt;;", or "\q" to quit.
             `);
             break;
 
@@ -3010,18 +3658,19 @@
 <span class="c-accent">       /\_/\         </span> <span class="c-gold">rifky@station-bojonegoro</span>
 <span class="c-accent">      ( o.o )        </span> <span class="c-dim">-----------------------</span>
 <span class="c-accent">       > ^ <         </span> <span class="c-cmd">OS:</span> Arch Linux x86_64 (Rolling Release)
-<span class="c-purple">     /|     |\       </span> <span class="c-cmd">Host:</span> Custom Rig Bojonegoro (Ryzen 9 7950X, 64GB DDR5)
+<span class="c-purple">     /|     |\       </span> <span class="c-cmd">Host:</span> Custom Station (Ryzen 9 7950X, 64GB DDR5, RTX 4090)
 <span class="c-purple">    (_|     |_)      </span> <span class="c-cmd">Kernel:</span> 6.12.9-zen1-1-zen
 <span class="c-accent">      |     |        </span> <span class="c-cmd">Uptime:</span> 4+ Years in Production (2021 - Present)
-<span class="c-accent">     /       \       </span> <span class="c-cmd">Shell:</span> zsh 5.9 + starship
+<span class="c-accent">     /       \       </span> <span class="c-cmd">Shell:</span> zsh 5.9 + starship prompt
 <span class="c-accent">    (____|____)      </span> <span class="c-cmd">Terminal:</span> kitty + tmux 3.4
-                      <span class="c-cmd">CPU:</span> AMD Ryzen 9 7950X (32) @ 5.700GHz
+                      <span class="c-cmd">CPU:</span> AMD Ryzen 9 7950X (16c/32t) @ 5.700GHz
                       <span class="c-cmd">GPU:</span> NVIDIA GeForce RTX 4090 24GB
                       <span class="c-cmd">Memory:</span> 18.2GiB / 64.0GiB (28%)
-                      <span class="c-cmd">Primary Stack:</span> Rust (Axum, Tokio) • Go • TypeScript • Next.js 15
-                      <span class="c-cmd">AI Runtimes:</span> Gemini 2.0 • Groq LLaMA-3.3 • Ollama • MCP Servers
-                      <span class="c-cmd">Scholar Research:</span> 10 Publications (Google Scholar SPRDsG4AAAAJ)
-                      <span class="c-cmd">IP Rights (HKI):</span> 2x Kemenkumham RI (EC00202220054, EC00202154284)
+                      <span class="c-cmd">Disk:</span> NVMe 2TB PCIe 4.0 (ZFS mirror pool)
+                      <span class="c-cmd">Primary Runtimes:</span> Rust 1.85 • Go 1.24 • Bun 1.2 • Node 22 • Python 3.12
+                      <span class="c-cmd">AI Platforms:</span> Gemini 2.0 • Groq LLaMA 3.3 • Model Context Protocol (MCP)
+                      <span class="c-cmd">Scholar Publications:</span> 10 Indexed Research Papers (SPRDsG4AAAAJ)
+                      <span class="c-cmd">Patents (HKI):</span> 2x Kemenkumham RI (EC00202220054, EC00202154284)
 
 <span style="color:#000;background:#000">███</span><span style="color:#f85149;background:#f85149">███</span><span style="color:#2ea44f;background:#2ea44f">███</span><span style="color:#e3b341;background:#e3b341">███</span><span style="color:#58a6ff;background:#58a6ff">███</span><span style="color:#bc8cff;background:#bc8cff">███</span><span style="color:#79c0ff;background:#79c0ff">███</span><span style="color:#ffffff;background:#ffffff">███</span>
             `);
@@ -3049,18 +3698,6 @@
             `);
             break;
 
-          case "cv":
-          case "resume":
-            appendLine(`
-<span class="c-gold">RIFKY AKHMAD FERNANDA — CURRICULUM VITAE</span>
-• <span class="c-cmd">Role:</span> Software Engineer | Full-Stack & Systems Architecture
-• <span class="c-cmd">Location:</span> Bojonegoro, Jawa Timur, Indonesia
-• <span class="c-cmd">Format:</span> ATS-Compliant 2-Page Executive PDF (Arial 10.0pt)
-• <span class="c-cmd">Opening PDF:</span> <a class="term-link" href="./CV_Rifky_Akhmad_Fernanda.pdf" target="_blank">./CV_Rifky_Akhmad_Fernanda.pdf ↗</a>
-            `);
-            window.open("./CV_Rifky_Akhmad_Fernanda.pdf", "_blank");
-            break;
-
           case "whoami":
             appendLine(`
 <span class="c-user">Rifky Akhmad F.</span> (@RifkyA911)
@@ -3069,17 +3706,6 @@ Systems Architect & Full-Stack Software Engineer • Night Owl 🦉
 • <strong>Focus:</strong> Low-latency concurrent backends (Rust/Go), AI guardrails & MCP servers, resilient enterprise pipelines.
 • <strong>Rule:</strong> "Architecture first. Clean boundaries. Zero slop."
             `);
-            break;
-
-          case "theme":
-            const nextT = themes[(themes.indexOf(currentTheme) + 1) % themes.length];
-            applyTheme(nextT);
-            appendLine(`<span class="c-accent">Switched active theme to: <b>${nextT}</b></span>`);
-            break;
-
-          case "lang":
-            applyLang(currentLang === "en" ? "id" : "en");
-            appendLine(`<span class="c-accent">Language switched to: <b>${currentLang.toUpperCase()}</b></span>`);
             break;
 
           case "clear":
@@ -3099,6 +3725,101 @@ Systems Architect & Full-Stack Software Engineer • Night Owl 🦉
             appendLine(`<span class="c-error">zsh: command not found: ${htmlEscape(cmd)}. Type <span class="c-cmd">'help'</span> for list of commands.</span>`);
             break;
         }
+      }
+
+      // POSTGRESQL QUERY HANDLER
+      function executePsqlCommand(raw) {
+        const query = raw.trim();
+        appendLine(`<span class="c-gold">rifky_db=#</span> <span class="term-cmd-echo">${htmlEscape(query)}</span>`);
+
+        const upper = query.toUpperCase().replace(/;$/, "");
+
+        if (query === "\q" || query.toLowerCase() === "exit" || query.toLowerCase() === "quit") {
+          inPsql = false;
+          updatePrompt();
+          appendLine(`<span class="c-dim">Closing connection to rifky_db... (Back to shell)</span>`);
+          return;
+        }
+
+        if (query === "\dt" || query === "\d") {
+          appendLine(`
+<span class="c-accent">               List of relations</span>
+<span class="c-dim"> Schema |    Name     | Type  | Owner </span>
+<span class="c-dim">--------+-------------+-------+-------</span>
+ public | projects    | table | rifky
+ public | skills      | table | rifky
+ public | experience  | table | rifky
+ public | scholar     | table | rifky
+<span class="c-dim">(4 rows)</span>
+          `);
+          return;
+        }
+
+        if (query === "\l") {
+          appendLine(`
+<span class="c-accent">                                  List of databases</span>
+<span class="c-dim">    Name     |  Owner  | Encoding |   Collate   |    Ctype    | Access privileges </span>
+<span class="c-dim">-------------+---------+----------+-------------+-------------+-------------------</span>
+ postgres    | rifky   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+ rifky_db    | rifky   | UTF8     | en_US.UTF-8 | en_US.UTF-8 | 
+<span class="c-dim">(2 rows)</span>
+          `);
+          return;
+        }
+
+        if (upper.startsWith("SELECT") && upper.includes("FROM PROJECTS")) {
+          let rows = psqlTables.projects.map(p => 
+            ` ${String(p.id).padEnd(2)} | ${p.name.padEnd(16)} | ${p.language.padEnd(11)} | ${p.role.padEnd(24)} | ${String(p.stars).padEnd(5)}`
+          ).join("\n");
+          appendLine(`
+<span class="c-dim"> id | name             | language    | role                     | stars </span>
+<span class="c-dim">----+------------------+-------------+--------------------------+-------</span>
+${rows}
+<span class="c-dim">(${psqlTables.projects.length} rows)</span>
+          `);
+          return;
+        }
+
+        if (upper.startsWith("SELECT") && upper.includes("FROM SKILLS")) {
+          let rows = psqlTables.skills.map(s => 
+            ` ${s.domain.padEnd(12)} | ${s.stack.padEnd(46)} | ${s.level.padEnd(10)}`
+          ).join("\n");
+          appendLine(`
+<span class="c-dim"> domain       | stack                                          | level      </span>
+<span class="c-dim">-------------+------------------------------------------------+------------</span>
+${rows}
+<span class="c-dim">(${psqlTables.skills.length} rows)</span>
+          `);
+          return;
+        }
+
+        if (upper.startsWith("SELECT") && upper.includes("FROM EXPERIENCE")) {
+          let rows = psqlTables.experience.map(e => 
+            ` ${e.company.padEnd(16)} | ${e.role.padEnd(26)} | ${e.impact}`
+          ).join("\n");
+          appendLine(`
+<span class="c-dim"> company          | role                       | impact </span>
+<span class="c-dim">------------------+----------------------------+--------------------------------------</span>
+${rows}
+<span class="c-dim">(${psqlTables.experience.length} rows)</span>
+          `);
+          return;
+        }
+
+        if (upper.startsWith("SELECT") && upper.includes("FROM SCHOLAR")) {
+          let rows = psqlTables.scholar.map(s => 
+            ` ${String(s.year).padEnd(4)} | ${s.title.padEnd(46)} | ${s.index}`
+          ).join("\n");
+          appendLine(`
+<span class="c-dim"> year | title                                          | index          </span>
+<span class="c-dim">------+------------------------------------------------+----------------</span>
+${rows}
+<span class="c-dim">(${psqlTables.scholar.length} rows)</span>
+          `);
+          return;
+        }
+
+        appendLine(`<span class="c-error">ERROR: syntax error or table not found in simulation. Try '\dt' or 'SELECT * FROM projects;'.</span>`);
       }
 
       function htmlEscape(str) {
